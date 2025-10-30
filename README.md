@@ -1,4 +1,5 @@
 
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
@@ -772,8 +773,6 @@ function renderResult(){
         <td><span class="name">جمال محمد عبده حكمي</span></td><td></td><td><span class="name">جمال محمد عبده حكمي</span></td><td></td>
       </tr>
     </table>
-   <br>
-   <br>
    
    <div style="display:flex; align-items:center; justify-content:flex-start; gap:10px; margin:20px 0; direction:rtl;">
   <img src="1.g.jpg" alt="شعار وزارة الثقافة" style="height:50px; margin-right:0;"></div>
