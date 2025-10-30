@@ -144,7 +144,7 @@ button.secondary {
   gap: 100px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 12px;
+  margin-top: -3px;
 }
 
 .car-box, .fuel-box {
@@ -624,7 +624,7 @@ function renderResult(){
       vertical-align: middle;
     }
     #resSignCell img {
-      max-width: 120px;
+      max-width: 222;
       height: auto;
       border: 1px solid #ccc;
       border-radius: 6px;
