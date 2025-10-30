@@ -259,7 +259,7 @@ table {
 
 th, td {
   border: 1px solid #000;
-  padding: 8px;
+  padding: 1px;
   vertical-align: middle;
 }
 
