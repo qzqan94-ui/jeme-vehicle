@@ -1,5 +1,5 @@
 
-
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
@@ -355,7 +355,7 @@ th {
 }
 
 .result-page table {
-  width: 85%;        /* يمكنك تغييرها إلى 100% أو 80% حسب الحاجة */
+  width: 90%;        /* يمكنك تغييرها إلى 100% أو 80% حسب الحاجة */
   margin: 1px auto; /* توسيط الجدول في الصفحة */
   border-collapse: collapse;
   font-size: 12px;
@@ -630,8 +630,8 @@ function renderResult(){
       border-radius: 6px;
     }
     input[type="text"], input[type="date"], input[type="time"] {
-      font-size: 16px;
-      padding: 1px 16px;
+      font-size: 14px;
+      padding: 0px 0px;
     }
     h5 {
       font-size: 16px
