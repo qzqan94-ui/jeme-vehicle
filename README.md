@@ -1,4 +1,5 @@
 
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
@@ -774,13 +775,15 @@ function renderResult(){
     </table>
    <br>
    <br>
-   
-   <div style="display:flex; align-items:center; justify-content:flex-start; gap:10px; margin:20px 0; direction:rtl;">
-  <img src="1.g.jpg" alt="شعار وزارة الثقافة" style="height:50px; margin-right:0;"></div>
-    <h2 style="color:var(--accent); text-align:center; margin-top:15px;">تعهد استخدام</h2>
-    <div style="text-align:right; line-height:1.8; font-size:15px; margin;-9px;">
-    
-    <br>
+
+   <div class="container">
+    <div class="card">
+      <h1>— </h1><div class="progress"><div id="prog" style="width:0%">
+      <div style="display:flex; align-items:center; justify-content:center; gap:10px; margin:20px 0;">
+  <img src="1.g.jpg" alt="شعار وزارة الثقافة" style="height:50px;">
+      </div></div>
+  <h1 style="margin:0;">تعهد</h1>
+</div>
       <p>يتعهد المستخدم بما يلي بشأن استخدام سيارة الجهة:</p>
       <ol style="padding-right:25px;">
         <li>لا يسمح بقيادة السيارات لأي شخص لا يحمل رخصة قيادة سارية المفعول أو دون سن <strong>(21)وعلى ان يكون سائقي السيارات أحد مسئولي الوزارة او تحت كفالة الوزارة </strong> </li>
