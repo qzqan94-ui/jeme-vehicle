@@ -16,7 +16,7 @@ textarea {
   text-align: center;
   vertical-align: middle;
   line-height: 1.6;
-  height: 30px;
+  height: 26px;
   padding: 0;
   display: inline-block;
   font-size: 16px;
@@ -355,7 +355,7 @@ th {
 }
 
 .result-page table {
-  width: 90%;        /* يمكنك تغييرها إلى 100% أو 80% حسب الحاجة */
+  width: 97%;        /* يمكنك تغييرها إلى 100% أو 80% حسب الحاجة */
   margin: 1px auto; /* توسيط الجدول في الصفحة */
   border-collapse: collapse;
   font-size: 12px;
