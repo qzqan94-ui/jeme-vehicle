@@ -630,7 +630,7 @@ function renderResult(){
       border-radius: 6px;
     }
     input[type="text"], input[type="date"], input[type="time"] {
-      font-size: 14px;
+      font-size: 17px;
       padding: 2px 0px;
     }
     h5 {
