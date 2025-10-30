@@ -1,5 +1,5 @@
 
-<!DOCTYPE html>
+
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
@@ -469,7 +469,7 @@ th {
     </div>
 
     <!-- صفحة النتائج -->
-    <div id="result" class="result-page card" style="margin-top:14px;">
+    <div id="result" class="result-page card" style="margin-top:0px;">
       <!-- سيتم ملؤها ديناميكياً -->
     </div>
   </div>
@@ -630,11 +630,11 @@ function renderResult(){
       border-radius: 6px;
     }
     input[type="text"], input[type="date"], input[type="time"] {
-      font-size: 12px;
-      padding: 2px 4px;
+      font-size: 16px;
+      padding: 1px 16px;
     }
     h5 {
-      font-size: 16px;
+      font-size: 16px
     }
     .car-container img, .fuel-container img {
       max-height: 159px;
