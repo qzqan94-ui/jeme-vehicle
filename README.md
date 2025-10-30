@@ -218,9 +218,9 @@ canvas {
 =   RESULT PAGE
 ==============================*/
 .result-page {
-  display: block;
+  display: none;
   margin-top: 20px;
-  width: 100%;
+  width: 94%;
   max-width: 100%;
   overflow-x: auto;
   overflow-y: visible;
@@ -355,8 +355,8 @@ th {
 }
 
 .result-page table {
-  width: 100%;        /* يمكنك تغييرها إلى 100% أو 80% حسب الحاجة */
-  margin: 50 auto; /* توسيط الجدول في الصفحة */
+  width: 90%;        /* يمكنك تغييرها إلى 100% أو 80% حسب الحاجة */
+  margin: 20px auto; /* توسيط الجدول في الصفحة */
   border-collapse: collapse;
   font-size: 14px;
   border: 1px solid #000;
@@ -754,7 +754,7 @@ function renderResult(){
 
     <table>
       <tr>
-        <th class="section-title" colspan="2">التوقيع عند الاستلام</th>
+        <th style= padding: 6px 30px; class="section-title" colspan="2">التوقيع عند الاستلام</th>
         <th class="section-title" colspan="2">التوقيع عند التسليم</th>
       </tr>
       <tr>
