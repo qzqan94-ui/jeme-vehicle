@@ -780,7 +780,7 @@ function renderResult(){
   <img src="1.g.jpg" alt="شعار وزارة الثقافة" style="height:50px; margin-right:0;"></div>
     <h2 style="color:var(--accent); text-align:center; margin-top:18px;">تعهد استخدام</h2>
     <div style="text-align:right; line-height:1.8; font-size:15px; margin:0 20px;">
-    <br>
+    
     
       <p>يتعهد المستخدم بما يلي بشأن استخدام سيارة الجهة:</p>
       <ol style="padding-right:25px;">
