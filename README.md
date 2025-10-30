@@ -218,7 +218,7 @@ canvas {
 =   RESULT PAGE
 ==============================*/
 .result-page {
-  display: none;
+  display: block;
   margin-top: 20px;
   width: 100%;
   max-width: 100%;
