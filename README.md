@@ -355,10 +355,10 @@ th {
 }
 
 .result-page table {
-  width: 90%;        /* يمكنك تغييرها إلى 100% أو 80% حسب الحاجة */
-  margin: 20px auto; /* توسيط الجدول في الصفحة */
+  width: 85%;        /* يمكنك تغييرها إلى 100% أو 80% حسب الحاجة */
+  margin: 1px auto; /* توسيط الجدول في الصفحة */
   border-collapse: collapse;
-  font-size: 14px;
+  font-size: 12px;
   border: 1px solid #000;
 }
 
