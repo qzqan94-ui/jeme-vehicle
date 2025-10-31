@@ -774,11 +774,16 @@ function renderResult(){
       </tr>
     </table>
    
-   <div style="display:flex; align-items:center; justify-content:flex-start; gap:10px; margin:20px 0; direction:rtl;">
-  <img src="1.g.jpg" alt="شعار وزارة الثقافة" style="height:50px; margin-right:0;"></div>
-    <h2 style="color:var(--accent); text-align:center; margin-top:15px;">تعهد استخدام</h2>
-    <div style="text-align:right; line-height:1.8; font-size:15px; margin;-9px;">
-    
+   <div style="display:flex; align-items:center; justify-content:space-between; width:100%; direction:rtl; margin:20px 0;">
+  <!-- الشعار في أقصى اليمين -->
+  <img src="1.g.jpg" alt="شعار وزارة الثقافة" style="height:50px;">
+
+  <!-- كلمة في المنتصف -->
+  <h2 style="color:var(--accent); text-align:center; flex:1; margin:0;">تسليم داخلي</h2>
+
+  <!-- عنصر فارغ على الجهة المقابلة للشعار للحفاظ على التمركز -->
+  <div style="width:50px;"></div>
+</div>    
     <br>
       <p>يتعهد المستخدم بما يلي بشأن استخدام سيارة الجهة:</p>
       <ol style="padding-right:25px;">
