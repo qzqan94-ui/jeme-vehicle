@@ -1,5 +1,5 @@
 
-<!DOCTYPE html
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
@@ -642,7 +642,7 @@ function renderResult(){
     .signature-table {
       page-break-inside: avoid;
     }
-
+  </style>
 <div style="display:flex; align-items:center; justify-content:space-between; width:100%; direction:rtl; margin:20px 0;">
   <!-- الشعار في أقصى اليمين -->
   <img src="1.g.jpg" alt="شعار وزارة الثقافة" style="height:50px;">
@@ -824,7 +824,7 @@ function renderResult(){
         <td><input type="text" placeholder="اكتب الاسم هنا" style="width:95%; text-align:center;" value="${escapeHtml(receiver)}"></td>
         <td id="resSignCell"><img id="resSignImg" src="${signData}" alt="التوقيع" style="max-width:200px; border:0
           
-          <br>
+          
           px solid #ccc; border-radius:6px;"></td>
         <td><span class="name">الجهه هيئة التراث</span></td>
         <td></td>
