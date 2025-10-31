@@ -41,7 +41,7 @@ select {
   width: 100%;
   padding: 8px 10px;
   border-radius: 6px;
-  border: 1px solid #ccc;
+  border: 1px solid #e07000;
   box-sizing: border-box;
   text-align: center;
 }
@@ -77,7 +77,7 @@ td {
 =   LAYOUT
 ==============================*/
 .container {
-  max-width: 980px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -89,7 +89,8 @@ td {
 }
 
 h1 {
-  color: var(--accent);
+  color:#e07000;
+(--accent);
   text-align: center;
   margin: 6px 0 12px;
 }
