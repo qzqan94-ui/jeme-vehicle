@@ -1,13 +1,4 @@
 
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>jeme-vehicle</title>
 <meta name="generator" content="Jekyll v3.10.0" />
 <meta property="og:title" content="jeme-vehicle" />
 <meta property="og:locale" content="en_US" />
@@ -41,9 +32,6 @@
       
 
       
-<p>&lt;!DOCTYPE html&gt;</p>
-<html lang="ar" dir="rtl">
-<head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>نموذج تسليم المركبة - تفاعلي</title>
