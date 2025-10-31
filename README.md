@@ -1,11 +1,14 @@
-<!DOCTYPE html>
+
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>نموذج تسليم المركبة - تفاعلي</title>
   <style>
-   
+   h1 a[href="https://qzqan94-ui.github.io/jeme-vehicle/"] {
+  display: none;
+}
+
 input[type="text"],
 input[type="number"],
 input[type="date"],
