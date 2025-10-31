@@ -27,7 +27,7 @@ input[type="text"],
 input[type="date"],
 input[type="time"] {
   font-size: 13px;
-  padding: 1px 6px;
+  padding: 0px 0px;
   width: 98%;
   box-sizing: border-box;
   text-align: center;
@@ -779,7 +779,7 @@ function renderResult(){
   <img src="1.g.jpg" alt="شعار وزارة الثقافة" style="height:50px;">
 
   <!-- كلمة في المنتصف -->
-  <h2 style="color:var(--accent); text-align:center; flex:1; margin:-68px;">تعهد استخدام</h2>
+  <h2 style="color:var(--accent); text-align:center; flex:1; margin:0-68;">تسليم داخلي</h2>
 
   <!-- عنصر فارغ على الجهة المقابلة للشعار للحفاظ على التمركز -->
   <div style="width:50px;"></div>
@@ -817,11 +817,12 @@ function renderResult(){
         <td>مستخدمة</td>
       </tr>
     </table>
-<tr>
+    <br>
+    <tr>
         <th></th><th></th><th>اسم المستلم</th><th></th>
       </tr>
       <tr>
-        <td><input type="text" placeholder="اكتب الاسم هنا" style="width:95%; text-align:center;" value="${escapeHtml(receiver)}"></td>
+        <td><input type="text" placeholder="اكتب الاسم هنا" style="width:44%; text-align:center;" value="${escapeHtml(receiver)}"></td>
         <td id="resSignCell"><img id="resSignImg" src="${signData}" alt="التوقيع" style="max-width:200px; border:0
           
           
