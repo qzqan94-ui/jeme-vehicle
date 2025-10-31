@@ -1,11 +1,4 @@
 
-      
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>نموذج تسليم المركبة - تفاعلي</title>
-  <style>
-   /*=============================
-=   INPUTS & TEXTAREAS
 ==============================*/
 input[type="text"],
 input[type="number"],
