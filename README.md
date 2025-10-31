@@ -26,7 +26,6 @@
 
 
 <!-- You can set your favicon here -->
-<!-- link rel="shortcut icon" type="image/x-icon" href="/jeme-vehicle/favicon.ico" -->
 
 <!-- end custom head snippets -->
 
