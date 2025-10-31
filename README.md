@@ -1,39 +1,7 @@
 
-<!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>jeme-vehicle</title>
-<meta name="generator" content="Jekyll v3.10.0" />
-<meta property="og:title" content="jeme-vehicle" />
-<meta property="og:locale" content="en_US" />
-<link rel="canonical" href="https://qzqan94-ui.github.io/jeme-vehicle/" />
-<meta property="og:url" content="https://qzqan94-ui.github.io/jeme-vehicle/" />
-<meta property="og:site_name" content="jeme-vehicle" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="jeme-vehicle" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","headline":"jeme-vehicle","name":"jeme-vehicle","url":"https://qzqan94-ui.github.io/jeme-vehicle/"}</script>
-<!-- End Jekyll SEO tag -->
-
-    <link rel="stylesheet" href="/jeme-vehicle/assets/css/style.css?v=b175059d3419edf621e1bc2dbc5719d216022ae3">
-    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
-
-<!-- Setup Google Analytics -->
-
-
-
-<!-- You can set your favicon here -->
-<!-- link rel="shortcut icon" type="image/x-icon" href="/jeme-vehicle/favicon.ico" -->
-
-<!-- end custom head snippets -->
-
-  </head>
-  <body>
-    <div class="container-lg px-3 my-5 markdown-body">
-      
-      <h1><a href="https://qzqan94-ui.github.io/jeme-1vehicle/">1jeme-vehicle</a></h1>
-      
-
-      
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>نموذج تسليم المركبة - تفاعلي</title>
@@ -48,7 +16,7 @@ textarea {
   text-align: center;
   vertical-align: middle;
   line-height: 1.6;
-  height: 30px;
+  height: 26px;
   padding: 0;
   display: inline-block;
   font-size: 16px;
@@ -59,7 +27,7 @@ input[type="text"],
 input[type="date"],
 input[type="time"] {
   font-size: 13px;
-  padding: 4px 6px;
+  padding: 0px 0px;
   width: 98%;
   box-sizing: border-box;
   text-align: center;
@@ -73,7 +41,7 @@ select {
   width: 100%;
   padding: 8px 10px;
   border-radius: 6px;
-  border: 1px solid #ccc;
+  border: 1px solid #e07000;
   box-sizing: border-box;
   text-align: center;
 }
@@ -109,7 +77,7 @@ td {
 =   LAYOUT
 ==============================*/
 .container {
-  max-width: 980px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -121,7 +89,8 @@ td {
 }
 
 h1 {
-  color: var(--accent);
+  color:#e07000;
+(--accent);
   text-align: center;
   margin: 6px 0 12px;
 }
@@ -176,7 +145,7 @@ button.secondary {
   gap: 100px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 12px;
+  margin-top: -3px;
 }
 
 .car-box, .fuel-box {
@@ -250,9 +219,9 @@ canvas {
 =   RESULT PAGE
 ==============================*/
 .result-page {
-  display: block;
-  margin-top: 20px;
-  width: 100%;
+  display: none;
+  margin-top: 75px;
+  width: 98%;
   max-width: 100%;
   overflow-x: auto;
   overflow-y: visible;
@@ -291,7 +260,7 @@ table {
 
 th, td {
   border: 1px solid #000;
-  padding: 8px;
+  padding: 1px;
   vertical-align: middle;
 }
 
@@ -376,7 +345,7 @@ th {
     <div class="card">
       <h1>نموذج تسليم المركبة — تفاعلي</h1><div class="progress"><div id="prog" style="width:0%">
       <div style="display:flex; align-items:center; justify-content:center; gap:10px; margin:20px 0;">
-  <img src="1.g.jpg" alt="شعار وزارة الثقافة" style="height:50px;" />
+  <img src="1.g.jpg" alt="شعار وزارة الثقافة" style="height:50px;">
       </div></div>
   <h1 style="margin:0;">نموذج تسليم المركبة</h1>
 </div>
@@ -387,10 +356,10 @@ th {
 }
 
 .result-page table {
-  width: 100%;        /* يمكنك تغييرها إلى 100% أو 80% حسب الحاجة */
-  margin: 50 auto; /* توسيط الجدول في الصفحة */
+  width: 97%;        /* يمكنك تغييرها إلى 100% أو 80% حسب الحاجة */
+  margin: 1px auto; /* توسيط الجدول في الصفحة */
   border-collapse: collapse;
-  font-size: 14px;
+  font-size: 12px;
   border: 1px solid #000;
 }
 
@@ -405,32 +374,32 @@ th {
       <!-- STEP 1: بيانات المركبة الأساسية -->
       <div id="step1" class="step active">
         <label>1. نوع المركبة</label>
-        <input type="text" id="carType" placeholder="مثال: باجيرو" />
+        <input type="text" id="carType" placeholder="مثال: باجيرو">
         <label>2. رقم اللوحة</label>
-        <input type="text" id="plateNumber" placeholder="مثال: أ ب ج 1234" />
+        <input type="text" id="plateNumber" placeholder="مثال: أ ب ج 1234">
         <label>3. الموديل</label>
-        <input type="text" id="model" placeholder="مثال: 2024" />
+        <input type="text" id="model" placeholder="مثال: 2024">
         <label>4. اللون</label>
-        <input type="text" id="color" placeholder="مثال: أبيض" />
+        <input type="text" id="color" placeholder="مثال: أبيض">
         <div class="small">اضغط التالي للمتابعة إلى حالة المركبة قبل الاستخدام.</div>
       </div>
 
       <!-- STEP 2: حالة السيارة قبل الاستخدام - عداد و صورة -->
       <div id="step2" class="step">
         <label>حالة المركبة قبل الاستخدام — قراءة العداد</label>
-        <input type="text" id="odoBefore" placeholder="مثال: 12500 كم" />
-        <div style="margin-top:10px;"></div>
+        <input type="text" id="odoBefore" placeholder="مثال: 12500 كم">
+        <div style="margin-top:px;"></div>
         <label>تحديد أماكن الضرر (قبل الاستخدام)</label>
         <div class="image-row">
           <div class="car-box" id="carBeforeBox">
-            <img id="carBeforeImg" src="car.png.png" alt="صورة السيارة قبل الاستخدام" />
+            <img id="carBeforeImg" src="car.png.png" alt="صورة السيارة قبل الاستخدام">
           </div>
         </div>
         <div class="note">انقر لتحديد الضرر — انقر على العلامة لإزالتها</div>
         <label style="margin-top:12px;">نسبة البنزين قبل الاستخدام (يمكن النقر على العداد أو اختيار)</label>
         <div class="image-row">
           <div class="fuel-box" id="fuelBeforeBox">
-            <img id="fuelBeforeImg" src="car bt.png" alt="عداد البنزين قبل" />
+            <img id="fuelBeforeImg" src="car bt.png" alt="عداد البنزين قبل">
           </div>
           <select id="fuelBeforeSelect" style="width:200px;">
             <option value="">اختر نسبة</option>
@@ -446,18 +415,18 @@ th {
       <!-- STEP 3: حالة السيارة بعد الاستخدام -->
       <div id="step3" class="step">
         <label>حالة المركبة بعد الاستخدام — قراءة العداد</label>
-        <input type="text" id="odoAfter" placeholder="مثال: 12800 كم" />
+        <input type="text" id="odoAfter" placeholder="مثال: 12800 كم">
         <label style="margin-top:10px;">تحديد أماكن الضرر (بعد الاستخدام)</label>
         <div class="image-row">
           <div class="car-box" id="carAfterBox">
-            <img id="carAfterImg" src="car.png.png" alt="صورة السيارة بعد الاستخدام" />
+            <img id="carAfterImg" src="car.png.png" alt="صورة السيارة بعد الاستخدام">
           </div>
         </div>
         <div class="note">انقر لتحديد الضرر — انقر على العلامة لإزالتها</div>
         <label style="margin-top:12px;">نسبة البنزين بعد الاستخدام</label>
         <div class="image-row">
           <div class="fuel-box" id="fuelAfterBox">
-            <img id="fuelAfterImg" src="car bt.png" alt="عداد البنزين بعد" />
+            <img id="fuelAfterImg" src="car bt.png" alt="عداد البنزين بعد">
           </div>
           <select id="fuelAfterSelect" style="width:200px;">
             <option value="">اختر نسبة</option>
@@ -473,7 +442,7 @@ th {
       <!-- STEP 4: اسم المستلم + توقيع -->
       <div id="step4" class="step">
         <label>اسم المستلم</label>
-        <input type="text" id="receiverName" placeholder="اكتب اسم المستلم هنا" />
+        <input type="text" id="receiverName" placeholder="اكتب اسم المستلم هنا">
         <label style="margin-top:10px;">التوقيع الإلكتروني (ارسم هنا)</label>
         <canvas id="signCanvas" width="760" height="140"></canvas>
         <div style="display:flex; gap:10px; justify-content:center; margin-top:8px;">
@@ -486,22 +455,22 @@ th {
       <div id="step5" class="step">
         <label>تاريخ ووقت الاستلام</label>
         <div style="display:flex; gap:8px; justify-content:center;">
-          <input type="date" id="dateField" style="max-width:220px;" />
-          <input type="time" id="timeField" style="max-width:160px;" />
+          <input type="date" id="dateField" style="max-width:220px;">
+          <input type="time" id="timeField" style="max-width:160px;">
         </div>
         <label style="margin-top:12px;">ملاحظات إضافية (اختياري)</label>
-        <input type="text" id="notes" placeholder="ملاحظات..." />
+        <input type="text" id="notes" placeholder="ملاحظات...">
       </div>
 
       <!-- أزرار التنقل -->
       <div class="controls">
-        <button id="prevBtn" class="secondary" onclick="prevStep()" disabled="">السابق</button>
+        <button id="prevBtn" class="secondary" onclick="prevStep()" disabled>السابق</button>
         <button id="nextBtn" onclick="nextStep()">التالي</button>
       </div>
     </div>
 
     <!-- صفحة النتائج -->
-    <div id="result" class="result-page card" style="margin-top:14px;">
+    <div id="result" class="result-page card" style="margin: top-5px;">
       <!-- سيتم ملؤها ديناميكياً -->
     </div>
   </div>
@@ -656,17 +625,17 @@ function renderResult(){
       vertical-align: middle;
     }
     #resSignCell img {
-      max-width: 120px;
+      max-width: 222;
       height: auto;
       border: 1px solid #ccc;
       border-radius: 6px;
     }
     input[type="text"], input[type="date"], input[type="time"] {
-      font-size: 12px;
-      padding: 2px 4px;
+      font-size: 17px;
+      padding: 2px 0px;
     }
     h5 {
-      font-size: 16px;
+      font-size: 16px
     }
     .car-container img, .fuel-container img {
       max-height: 159px;
@@ -786,7 +755,7 @@ function renderResult(){
 
     <table>
       <tr>
-        <th class="section-title" colspan="2">التوقيع عند الاستلام</th>
+        <th style= padding: 6px 30px; class="section-title" colspan="2">التوقيع عند الاستلام</th>
         <th class="section-title" colspan="2">التوقيع عند التسليم</th>
       </tr>
       <tr>
@@ -794,9 +763,9 @@ function renderResult(){
       </tr>
       <tr>
         <td><input type="text" placeholder="اكتب الاسم هنا" style="width:95%; text-align:center;" value="${escapeHtml(receiver)}"></td>
-        <td id="resSignCell"><img id="resSignImg" src="${signData}" alt="التوقيع" style="max-width:200px; border:1px solid #ccc; border-radius:6px;"></td>
+        <td id="resSignCell"><img id="resSignImg" src="${signData}" alt="التوقيع" style="max-width:200px; border:0px solid #ccc; border-radius:6px;"></td>
         <td><input type="text" placeholder="اكتب الاسم هنا" style="width:95%; text-align:center;" value="${escapeHtml(receiver)}"></td>
-        <td id="resSignCell"><img id="resSignImg" src="${signData}" alt="التوقيع" style="max-width:200px; border:1px solid #ccc; border-radius:6px;"></td>
+        <td id="resSignCell"><img id="resSignImg" src="${signData}" alt="التوقيع" style="max-width:200px; border:0px solid #ccc; border-radius:6px;"></td>
       </tr>
       <tr>
         <th>صاحب الصلاحية</th><th>التوقيع</th><th>صاحب الصلاحية</th><th>التوقيع</th>
@@ -805,36 +774,29 @@ function renderResult(){
         <td><span class="name">جمال محمد عبده حكمي</span></td><td></td><td><span class="name">جمال محمد عبده حكمي</span></td><td></td>
       </tr>
     </table>
-   <br>
-   <br>
    
-   <div style="display:flex; align-items:center; justify-content:flex-start; gap:10px; margin:20px 0; direction:rtl;">
-  <img src="1.g.jpg" alt="شعار وزارة الثقافة" style="height:50px; margin-right:0;"></div>
-    <h2 style="color:var(--accent); text-align:center; margin-top:18px;">تعهد استخدام</h2>
-    <div style="text-align:right; line-height:1.8; font-size:15px; margin:0 20px;">
+   <div style="display:flex; align-items:center; justify-content:space-between; width:100%; direction:rtl; margin:20px 0;">
+  <!-- الشعار في أقصى اليمين -->
+  <img src="1.g.jpg" alt="شعار وزارة الثقافة" style="height:50px;">
+
+  <!-- كلمة في المنتصف -->
+  <h2 style="color:var(--accent); text-align:center; flex:1; margin:0-68;">تسليم داخلي</h2>
+
+  <!-- عنصر فارغ على الجهة المقابلة للشعار للحفاظ على التمركز -->
+  <div style="width:50px;"></div>
+</div>    
     <br>
-    
       <p>يتعهد المستخدم بما يلي بشأن استخدام سيارة الجهة:</p>
       <ol style="padding-right:25px;">
-      
-        <li>لا يسمح بقيادة السيارات لأي شخص لا يحمل رخصة قيادة سارية المفعول أو دون سن <strong>(21)وعلى ان يكون سائقي السيارات أحد مسئولي الوزارة او تحت كفالة الوزارة </strong> ...</li>
-        <br>
+        <li>لا يسمح بقيادة السيارات لأي شخص لا يحمل رخصة قيادة سارية المفعول أو دون سن <strong>(21)وعلى ان يكون سائقي السيارات أحد مسئولي الوزارة او تحت كفالة الوزارة </strong> </li>
         <li>استخدام السيارة فقط للمهام الرسميه داخل وقت العمل أو خارجة , والالتزام بايقاف السيارة في موقع الوزارة أو الفرع بعد الانتهاء من المهمة مباشرة , وتسليم السيارة للفرع أو المكتب خلال الإجازات السنويه او الرسميه </li>
-        <br>
         <li>عدم التدخين داخل السيارة والمحافظة على نظافة السيارة من الداخل والخارج وعدم ازالة شعار الوزارة الرسمي من هيكل السيارة , وعدم التعديل او الإضافة على المركبة من تظليل او تغير لشكل السيارة الداخلي أو الخارجي</li>
-        <br>
         <li>الالتزام بالصيانه الدورية بمسافة (5000) كم تلافيا لوقوع تلف بالسيارة المستخدمة أو البديلة , وسيتم تحميل المستلم كافة تكاليف إصلاح التلف في حال عدم الالتزام بالصيانه الدورية , بالاضافة الى اتخاد الإجراءت المناسبة التي تراها الإدارة المعنية </li>
-        <br>
         <li>لايحق لمستلم المركبة حال وقوع حادث او عطل بمحركاتها ان يتم اصلاحها من قبله مباشرة او التنازل عن الطرف الاخر دون تنسيق إدارة الخدمات المشتركة بالوزارة </li>
-        <br>
         <li>التزام مستلم السيارة باشعار ادارة الخدمات المشتركة بالوزارة فوراً بشكل رسمي عن أي حادث  أو سرقة أو تلف  تتعرض له السيارة أو  أي استفسار من إدارة الخدمات المشركة بشأن اسم مستخدم السيارة في اي وقت من الاوقات , وان يلتزم بتأمين المستندات التاليه في حال وقوع حادث (تقرير المرور او نجم -ورقة الاصلاح ) كذالك ارفاق نموذج الحوادث</li>
-        <br>
         <li>يجب الالتزام بتعليمات وضوابط السير المرورية وفي حال عدم التقيد بها يتحمل الغرامات التي قد تفرضها الجهات الحكومية المختصة لأي سبب كان على المستلم او على أي من سائقيه بما في ذلك كل مايترتب أو يعود الى الغرامات التي تقع على السيارة </li>
-        <br>
         <li>لايحق للمسئول او مرجعة الاداري استثناء اي شرط من الشروط السابقة مهما كانت الاسباب</li>
-        <br>
         <li>يتحمل المسئول المخالف لهذا الشرو سحب المركبة منه لمدة شهر لأول مره ولمدة شهرين في المره الثانيه والسحب لمدة سته اشهر للمرة الثالثة مع تحمل المسئول القيام بواجباته ومسئوليات العمل بمركبته الخاصة خلال فترة السحب لعدم الالتزام بالمحافظة على المركبة المسلمة له </li>
-        <br>
         <li>أقر بالاطلاع والتقيد بكافة الشروط الواردة في هذا التعهد.</li>
       </ol>
     </div>
@@ -856,12 +818,16 @@ function renderResult(){
         <td>مستخدمة</td>
       </tr>
     </table>
-<tr>
+    <br>
+    <tr>
         <th></th><th></th><th>اسم المستلم</th><th></th>
       </tr>
       <tr>
-        <td><input type="text" placeholder="اكتب الاسم هنا" style="width:95%; text-align:center;" value="${escapeHtml(receiver)}"></td>
-        <td id="resSignCell"><img id="resSignImg" src="${signData}" alt="التوقيع" style="max-width:200px; border:1px solid #ccc; border-radius:6px;"></td>
+        <td><input type="text" placeholder="اكتب الاسم هنا" style="width:44%; text-align:center;" value="${escapeHtml(receiver)}"></td>
+        <td id="resSignCell"><img id="resSignImg" src="${signData}" alt="التوقيع" style="max-width:200px; border:0
+          
+          
+          px solid #ccc; border-radius:6px;"></td>
         <td><span class="name">الجهه هيئة التراث</span></td>
         <td></td>
       </tr> <div class="datetime-cell" style="display:flex; justify-content:space-around; gap:8px; align-items:center;">
@@ -1074,12 +1040,4 @@ function placeFuelMarkerOnResult(containerId, value) {
 	// ]]>
 </script>
 </body>
-</html>
-
-
-      
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
-    <script>anchors.add();</script>
-  </body>
 </html>
