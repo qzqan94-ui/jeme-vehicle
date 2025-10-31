@@ -368,7 +368,7 @@ th {
       <h1>نموذج تسليم المركبة — تفاعلي</h1><div class="progress"><div id="prog" style="width:0%">
       <div style="display:flex; align-items:center; justify-content:center; gap:10px; margin:20px 0;">
   <img src="1.g.jpg" alt="شعار وزارة الثقافة" style="height:50px;" />
-      </div></div>
+      </div><div>
   <h1 style="margin:0;">نموذج تسليم المركبة</h1>
 </div>
 
