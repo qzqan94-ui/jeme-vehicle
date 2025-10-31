@@ -370,7 +370,7 @@ th {
   <img src="1.g.jpg" alt="شعار وزارة الثقافة" style="height:50px;" />
       </div><div>
   <h1 style="margin:0;">نموذج تسليم المركبة</h1>
-</div>
+
 
 <style>/* ✅ تنسيق عام للجدول داخل صفحة النتيجة */
 .result-page {
