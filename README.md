@@ -4,7 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>نموذج تسليم المركبة - تفاعلي</title>
-  <style>
+  <meta thhp-equiv="X-ua-compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
    h1 a[href="https://qzqan94-ui.github.io/jeme-vehicle/"] {
   display: none;
 }
@@ -89,8 +91,7 @@ td {
 }
 
 h1 {
-  color:#e07000;
-(--accent);
+  color:#e07000(--accent);
   text-align: center;
   margin: 6px 0 12px;
 }
@@ -357,7 +358,7 @@ th {
 
 .result-page table {
   width: 96%;        /* يمكنك تغييرها إلى 100% أو 80% حسب الحاجة */
-  margin: ; /* توسيط الجدول في الصفحة */
+  margin: 0; /* توسيط الجدول في الصفحة */
   border-collapse: collapse;
   font-size: 12px;
   border: 1px solid #000;
@@ -369,7 +370,6 @@ th {
   padding: 8px 10px;
   text-align: center;
 }
-
 </style>
       <!-- STEP 1: بيانات المركبة الأساسية -->
       <div id="step1" class="step active">
