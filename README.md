@@ -1,16 +1,35 @@
 
 <html lang="ar" dir="rtl">
+
 <head>
+  <div class="wrapper"></div>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>نموذج تسليم المركبة - تفاعلي</title>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta thhp-equiv="X-ua-compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
    h1 a[href="https://qzqan94-ui.github.io/jeme-vehicle/"] {
   display: none;
+}
+/* الحجم الطبيعي */
+.wrapper {
+  transform: scale(1);
+  transform-origin: top center;
+}
+
+/* شاشة أصغر من 768px → خليه يصغر شوي */
+@media (max-width: 768px) {
+  .wrapper {
+    transform: scale(0.85);
+  }
+}
+
+/* شاشة أصغر من 500px → يصغر أكثر */
+@media (max-width: 500px) {
+  .wrapper {
+    transform: scale(0.1);
+  }
 }
 
 input[type="text"],
@@ -1049,6 +1068,7 @@ function placeFuelMarkerOnResult(containerId, value) {
 	}
 	// ]]>
 </script>
+</div>
 </body>
 </html>
 
