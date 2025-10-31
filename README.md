@@ -824,11 +824,11 @@ function renderResult(){
         <td><input type="text" placeholder="اكتب الاسم هنا" style="width:95%; text-align:center;" value="${escapeHtml(receiver)}"></td>
         <td id="resSignCell"><img id="resSignImg" src="${signData}" alt="التوقيع" style="max-width:200px; border:0
           
-          
+          <br>
           px solid #ccc; border-radius:6px;"></td>
         <td><span class="name">الجهه هيئة التراث</span></td>
         <td></td>
-      </tr><br> <div class="datetime-cell" style="display:flex; justify-content:space-around; gap:8px; align-items:center;">
+      </tr> <div class="datetime-cell" style="display:flex; justify-content:space-around; gap:8px; align-items:center;">
             <label>تاريخ التسليم:</label>
             <input type="date" id="resReturnDate" value="${escapeHtml(dateVal)}">
             <input type="time" id="resReturnTime" value="${escapeHtml(timeVal)}">
