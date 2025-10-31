@@ -357,7 +357,7 @@ th {
 
 .result-page table {
   width: 96%;        /* يمكنك تغييرها إلى 100% أو 80% حسب الحاجة */
-  margin: 12px auto; /* توسيط الجدول في الصفحة */
+  margin: ; /* توسيط الجدول في الصفحة */
   border-collapse: collapse;
   font-size: 12px;
   border: 1px solid #000;
@@ -818,16 +818,14 @@ function renderResult(){
         <td>مستخدمة</td>
       </tr>
     </table>
-    <p style="text-align:right; font-size:15px;">للاستفسار يرحى التواصل مع مسئولي النقل في مثر الهيئة : <a href="tel:0545105222" style="color:blue; text-decoration:none;">(0545105222)</a></p>
+    <p style="text-align:right; font-size:15px;">للاستفسار يرحى التواصل مع مسئولي النقل في مثر الهيئة : <a href="tel:0545105222" style="color:blue; text-decoration:none;">(0545105222)</a><br><td><span class="name">الجهه هيئة التراث</span></td></p>
     <br>
     <tr>
         <th></th><th></th><th>اسم المستلم</th><th></th>
       </tr>
       <tr>
-        <td><input type="text" placeholder="اكتب الاسم هنا" style="width:44%; text-align:center;" value="${escapeHtml(receiver)}"<span class="name">الجهه هيئة التراث</span></td>
-        <td id="resSignCell"><img id="resSignImg" src="${signData}" alt="التوقيع" style="max-width:200px; border:0
-          
-          
+        <td><input type="text" placeholder="اكتب الاسم هنا" style="width:44%; text-align:center;" value="${escapeHtml(receiver)}"
+        <td id="resSignCell"><img id="resSignImg" src="${signData}" alt="التوقيع" style="width:200px; border:0
           px solid #ccc; border-radius:6px;"></td>
         
         <td></td>
