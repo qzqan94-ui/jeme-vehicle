@@ -1,43 +1,4 @@
 
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>jeme-vehicle</title>
-<meta name="generator" content="Jekyll v3.10.0" />
-<meta property="og:title" content="jeme-vehicle" />
-<meta property="og:locale" content="en_US" />
-<link rel="canonical" href="https://qzqan94-ui.github.io/jeme-vehicle/" />
-<meta property="og:url" content="https://qzqan94-ui.github.io/jeme-vehicle/" />
-<meta property="og:site_name" content="jeme-vehicle" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="jeme-vehicle" />
-<script type="application/ld+json">
-<!-- End Jekyll SEO tag -->
-
-    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
-
-<!-- Setup Google Analytics -->
-
-
-
-<!-- You can set your favicon here -->
-
-<!-- end custom head snippets -->
-
-  </head>
-  <body>
-    <div class="container-lg px-3 my-5 markdown-body">
-      
-      <h1><a href="https://qzqan94-ui.github.io/"></a></h1>
-      
-
-      
-
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
