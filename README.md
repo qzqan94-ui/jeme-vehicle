@@ -356,7 +356,7 @@ th {
 }
 
 .result-page table {
-  width: 97%;        /* يمكنك تغييرها إلى 100% أو 80% حسب الحاجة */
+  width: 96%;        /* يمكنك تغييرها إلى 100% أو 80% حسب الحاجة */
   margin: 1px auto; /* توسيط الجدول في الصفحة */
   border-collapse: collapse;
   font-size: 12px;
@@ -818,24 +818,25 @@ function renderResult(){
         <td>مستخدمة</td>
       </tr>
     </table>
+    <p style="text-align:right; font-size:15px;">للاستفسار يرحى التواصل مع مسئولي النقل في مثر الهيئة : <a href="tel:0545105222" style="color:blue; text-decoration:none;">(0545105222)</a></p>
     <br>
     <tr>
         <th></th><th></th><th>اسم المستلم</th><th></th>
       </tr>
       <tr>
-        <td><input type="text" placeholder="اكتب الاسم هنا" style="width:44%; text-align:center;" value="${escapeHtml(receiver)}"></td>
+        <td><input type="text" placeholder="اكتب الاسم هنا" style="width:44%; text-align:center;" value="${escapeHtml(receiver)}"<span class="name">الجهه هيئة التراث</span></td>
         <td id="resSignCell"><img id="resSignImg" src="${signData}" alt="التوقيع" style="max-width:200px; border:0
           
           
           px solid #ccc; border-radius:6px;"></td>
-        <td><span class="name">الجهه هيئة التراث</span></td>
+        
         <td></td>
       </tr> <div class="datetime-cell" style="display:flex; justify-content:space-around; gap:8px; align-items:center;">
             <label>تاريخ التسليم:</label>
-            <input type="date" id="resReturnDate" value="${escapeHtml(dateVal)}">
+            <input type="date" id="resReturnDate" value="${escapeHtml(dateVal)}"><tr></tr>
             <input type="time" id="resReturnTime" value="${escapeHtml(timeVal)}">
           </div>
-<p style="text-align:right; font-size:15px;">للاستفسار: <a href="tel:0545105222" style="color:blue; text-decoration:none;">(0545105222)</a></p>
+
     
     <div class="actions-result">
       <button type="button" class="print-btn print">تحميل الملف كـ PDF</button>
