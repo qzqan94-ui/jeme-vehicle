@@ -779,7 +779,7 @@ function renderResult(){
   <img src="1.g.jpg" alt="شعار وزارة الثقافة" style="height:50px;">
 
   <!-- كلمة في المنتصف -->
-  <h2 style="color:var(--accent); text-align:center; flex:1; margin:0;">تسليم داخلي</h2>
+  <h2 style="color:var(--accent); text-align:center; flex:1; margin:-68px;">تعهد استخدام</h2>
 
   <!-- عنصر فارغ على الجهة المقابلة للشعار للحفاظ على التمركز -->
   <div style="width:50px;"></div>
