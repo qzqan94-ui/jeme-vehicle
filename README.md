@@ -27,7 +27,7 @@ input[type="text"],
 input[type="date"],
 input[type="time"] {
   font-size: 13px;
-  padding: 4px 6px;
+  padding: 0px 1px;
   width: 98%;
   box-sizing: border-box;
   text-align: center;
