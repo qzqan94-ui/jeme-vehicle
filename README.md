@@ -8,15 +8,7 @@
 
 <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>jeme-vehicle</title>
-<meta name="generator" content="Jekyll v3.10.0" />
-<meta property="og:title" content="jeme-vehicle" />
-<meta property="og:locale" content="en_US" />
-<link rel="canonical" href="https://qzqan94-ui.github.io/jeme-vehicle/" />
-<meta property="og:url" content="https://qzqan94-ui.github.io/jeme-vehicle/" />
-<meta property="og:site_name" content="jeme-vehicle" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="jeme-vehicle" />
+meta property="twitter:title" content="jeme-vehicle" />
 <script type="application/ld+json">
 
 
