@@ -1,4 +1,5 @@
 
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
@@ -219,8 +220,8 @@ canvas {
 ==============================*/
 .result-page {
   display: none;
-  margin-top: 20px;
-  width: 94%;
+  margin-top: 75px;
+  width: 98%;
   max-width: 100%;
   overflow-x: auto;
   overflow-y: visible;
@@ -387,7 +388,7 @@ th {
       <div id="step2" class="step">
         <label>حالة المركبة قبل الاستخدام — قراءة العداد</label>
         <input type="text" id="odoBefore" placeholder="مثال: 12500 كم">
-        <div style="margin-top:10px;"></div>
+        <div style="margin-top:75px;"></div>
         <label>تحديد أماكن الضرر (قبل الاستخدام)</label>
         <div class="image-row">
           <div class="car-box" id="carBeforeBox">
