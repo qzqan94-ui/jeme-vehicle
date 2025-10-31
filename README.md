@@ -642,7 +642,7 @@ function renderResult(){
     .signature-table {
       page-break-inside: avoid;
     }
-  </style>
+
 <div style="display:flex; align-items:center; justify-content:space-between; width:100%; direction:rtl; margin:20px 0;">
   <!-- الشعار في أقصى اليمين -->
   <img src="1.g.jpg" alt="شعار وزارة الثقافة" style="height:50px;">
@@ -828,7 +828,7 @@ function renderResult(){
           px solid #ccc; border-radius:6px;"></td>
         <td><span class="name">الجهه هيئة التراث</span></td>
         <td></td>
-      </tr> <div class="datetime-cell" style="display:flex; justify-content:space-around; gap:8px; align-items:center;">
+      </tr><br> <div class="datetime-cell" style="display:flex; justify-content:space-around; gap:8px; align-items:center;">
             <label>تاريخ التسليم:</label>
             <input type="date" id="resReturnDate" value="${escapeHtml(dateVal)}">
             <input type="time" id="resReturnTime" value="${escapeHtml(timeVal)}">
