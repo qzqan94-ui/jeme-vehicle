@@ -17,10 +17,8 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="jeme-vehicle" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","headline":"jeme-vehicle","name":"jeme-vehicle","url":"https://qzqan94-ui.github.io/jeme-vehicle/"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/jeme-vehicle/assets/css/style.css?v=b175059d3419edf621e1bc2dbc5719d216022ae3">
     <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
 
 <!-- Setup Google Analytics -->
