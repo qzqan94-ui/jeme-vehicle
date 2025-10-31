@@ -1,5 +1,25 @@
 
-<!DOCTYPE html
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>jeme-vehicle</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="jeme-vehicle" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="https://qzqan94-ui.github.io/jeme-vehicle/" />
+<meta property="og:url" content="https://qzqan94-ui.github.io/jeme-vehicle/" />
+<meta property="og:site_name" content="jeme-vehicle" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="jeme-vehicle" />
+<script type="application/ld+json">
+
+
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
@@ -345,7 +365,7 @@ th {
     <div class="card">
       <h1>نموذج تسليم المركبة — تفاعلي</h1><div class="progress"><div id="prog" style="width:0%">
       <div style="display:flex; align-items:center; justify-content:center; gap:10px; margin:20px 0;">
-  <img src="1.g.jpg" alt="شعار وزارة الثقافة" style="height:50px;">
+  <img src="1.g.jpg" alt="شعار وزارة الثقافة" style="height:50px;" />
       </div></div>
   <h1 style="margin:0;">نموذج تسليم المركبة</h1>
 </div>
@@ -374,32 +394,32 @@ th {
       <!-- STEP 1: بيانات المركبة الأساسية -->
       <div id="step1" class="step active">
         <label>1. نوع المركبة</label>
-        <input type="text" id="carType" placeholder="مثال: باجيرو">
+        <input type="text" id="carType" placeholder="مثال: باجيرو" />
         <label>2. رقم اللوحة</label>
-        <input type="text" id="plateNumber" placeholder="مثال: أ ب ج 1234">
+        <input type="text" id="plateNumber" placeholder="مثال: أ ب ج 1234" />
         <label>3. الموديل</label>
-        <input type="text" id="model" placeholder="مثال: 2024">
+        <input type="text" id="model" placeholder="مثال: 2024" />
         <label>4. اللون</label>
-        <input type="text" id="color" placeholder="مثال: أبيض">
+        <input type="text" id="color" placeholder="مثال: أبيض" />
         <div class="small">اضغط التالي للمتابعة إلى حالة المركبة قبل الاستخدام.</div>
       </div>
 
       <!-- STEP 2: حالة السيارة قبل الاستخدام - عداد و صورة -->
       <div id="step2" class="step">
         <label>حالة المركبة قبل الاستخدام — قراءة العداد</label>
-        <input type="text" id="odoBefore" placeholder="مثال: 12500 كم">
+        <input type="text" id="odoBefore" placeholder="مثال: 12500 كم" />
         <div style="margin-top:px;"></div>
         <label>تحديد أماكن الضرر (قبل الاستخدام)</label>
         <div class="image-row">
           <div class="car-box" id="carBeforeBox">
-            <img id="carBeforeImg" src="car.png.png" alt="صورة السيارة قبل الاستخدام">
+            <img id="carBeforeImg" src="car.png.png" alt="صورة السيارة قبل الاستخدام" />
           </div>
         </div>
         <div class="note">انقر لتحديد الضرر — انقر على العلامة لإزالتها</div>
         <label style="margin-top:12px;">نسبة البنزين قبل الاستخدام (يمكن النقر على العداد أو اختيار)</label>
         <div class="image-row">
           <div class="fuel-box" id="fuelBeforeBox">
-            <img id="fuelBeforeImg" src="car bt.png" alt="عداد البنزين قبل">
+            <img id="fuelBeforeImg" src="car bt.png" alt="عداد البنزين قبل" />
           </div>
           <select id="fuelBeforeSelect" style="width:200px;">
             <option value="">اختر نسبة</option>
@@ -415,18 +435,18 @@ th {
       <!-- STEP 3: حالة السيارة بعد الاستخدام -->
       <div id="step3" class="step">
         <label>حالة المركبة بعد الاستخدام — قراءة العداد</label>
-        <input type="text" id="odoAfter" placeholder="مثال: 12800 كم">
+        <input type="text" id="odoAfter" placeholder="مثال: 12800 كم" />
         <label style="margin-top:10px;">تحديد أماكن الضرر (بعد الاستخدام)</label>
         <div class="image-row">
           <div class="car-box" id="carAfterBox">
-            <img id="carAfterImg" src="car.png.png" alt="صورة السيارة بعد الاستخدام">
+            <img id="carAfterImg" src="car.png.png" alt="صورة السيارة بعد الاستخدام" />
           </div>
         </div>
         <div class="note">انقر لتحديد الضرر — انقر على العلامة لإزالتها</div>
         <label style="margin-top:12px;">نسبة البنزين بعد الاستخدام</label>
         <div class="image-row">
           <div class="fuel-box" id="fuelAfterBox">
-            <img id="fuelAfterImg" src="car bt.png" alt="عداد البنزين بعد">
+            <img id="fuelAfterImg" src="car bt.png" alt="عداد البنزين بعد" />
           </div>
           <select id="fuelAfterSelect" style="width:200px;">
             <option value="">اختر نسبة</option>
@@ -442,7 +462,7 @@ th {
       <!-- STEP 4: اسم المستلم + توقيع -->
       <div id="step4" class="step">
         <label>اسم المستلم</label>
-        <input type="text" id="receiverName" placeholder="اكتب اسم المستلم هنا">
+        <input type="text" id="receiverName" placeholder="اكتب اسم المستلم هنا" />
         <label style="margin-top:10px;">التوقيع الإلكتروني (ارسم هنا)</label>
         <canvas id="signCanvas" width="760" height="140"></canvas>
         <div style="display:flex; gap:10px; justify-content:center; margin-top:8px;">
@@ -455,16 +475,16 @@ th {
       <div id="step5" class="step">
         <label>تاريخ ووقت الاستلام</label>
         <div style="display:flex; gap:8px; justify-content:center;">
-          <input type="date" id="dateField" style="max-width:220px;">
-          <input type="time" id="timeField" style="max-width:160px;">
+          <input type="date" id="dateField" style="max-width:220px;" />
+          <input type="time" id="timeField" style="max-width:160px;" />
         </div>
         <label style="margin-top:12px;">ملاحظات إضافية (اختياري)</label>
-        <input type="text" id="notes" placeholder="ملاحظات...">
+        <input type="text" id="notes" placeholder="ملاحظات..." />
       </div>
 
       <!-- أزرار التنقل -->
       <div class="controls">
-        <button id="prevBtn" class="secondary" onclick="prevStep()" disabled>السابق</button>
+        <button id="prevBtn" class="secondary" onclick="prevStep()" disabled="">السابق</button>
         <button id="nextBtn" onclick="nextStep()">التالي</button>
       </div>
     </div>
@@ -1040,4 +1060,12 @@ function placeFuelMarkerOnResult(containerId, value) {
 	// ]]>
 </script>
 </body>
+</html>
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
 </html>
