@@ -12,8 +12,7 @@ meta property="twitter:title" content="jeme-vehicle" />
 <script type="application/ld+json">
 
 
-<html lang="ar" dir="rtl">
-<head>
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>نموذج تسليم المركبة - تفاعلي</title>
