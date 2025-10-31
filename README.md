@@ -1,25 +1,11 @@
-
 <!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>jeme-vehicle</title>
-meta property="twitter:title" content="jeme-vehicle" />
-<script type="application/ld+json">
-
-
-
+<html lang="ar" dir="rtl">
+<head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>نموذج تسليم المركبة - تفاعلي</title>
   <style>
-   /*=============================
-=   INPUTS & TEXTAREAS
-==============================*/
+   
 input[type="text"],
 input[type="number"],
 input[type="date"],
