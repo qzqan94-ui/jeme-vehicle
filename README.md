@@ -92,7 +92,7 @@ select {
   background: #fff;
   box-sizing: border-box;
   touch-action: none;
-  display: block;
+  display: none;
   margin-left: auto;
   margin-right: auto;
 }
