@@ -96,26 +96,18 @@ select {
   box-sizing: border-box;
 }
 
-/* إعدادات صفحة النتائج كما كانت */
 .result-page {
-  width: auto;
-  margin: 0 auto;
+  width: 100%;
   box-sizing: border-box;
-  overflow: visible;
+  overflow-x: auto;
 }
 
-.result-page table {
-  width: auto;
+.result-page table, table {
+  width: 100%;
+  max-width: 100%;
   border-collapse: collapse;
+  box-sizing: border-box;
 }
-
-.result-page th,
-.result-page td {
-  padding: 6px;
-  border: 1px solid #555;
-  text-align: center;
-}
-
 
 @media (max-width: 600px) {
   .image-row { gap: 10px; }
@@ -124,7 +116,6 @@ select {
   input[type="text"], textarea, select { font-size: 14px; padding: 8px; }
   .marker { width: 14px; height: 14px; }
 }
-
 
 
 }
