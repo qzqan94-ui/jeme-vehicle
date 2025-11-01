@@ -84,17 +84,19 @@ select {
   cursor: pointer;
 }
 #signCanvas {
-  width: 90% !important;         /* يأخذ معظم عرض الخلية */
-  max-width: 600px;              /* أقصى عرض على الكمبيوتر */
-  height: 300px !important;      /* ارتفاع كبير للتوقيع */
-  border: 2px solid #e07000;     /* إطار واضح */
+  width: 90% !important;
+  max-width: 600px;
+  height: 300px !important;
+  border: 2px solid #e07000;
   border-radius: 6px;
   background: #fff;
   box-sizing: border-box;
-  touch-action: none;            /* يتيح الرسم على الشاشات اللمسية */
+  touch-action: none;
   display: block;
-  margin: 20px auto;             /* توسيط أفقي ومسافة من الأعلى والأسفل */
+  margin-left: auto;
+  margin-right: auto;
 }
+
 
 
 .result-page {
@@ -556,12 +558,11 @@ th {
         <label>اسم المستلم</label>
         <input type="text" id="receiverName" placeholder="اكتب اسم المستلم هنا" />
         <label style="margin-top:10px;">التوقيع الإلكتروني (ارسم هنا)</label>
-<canvas id="signCanvas" width="760" height="300"></canvas>
-<div style="display:flex; gap:10px; justify-content:center; margin-top:8px;">
-  <button type="button" id="clearSignBtn" class="secondary">مسح</button>
-  <button type="button" id="saveSignPreview" class="secondary">معاينة التوقيع</button>
-</div>
-
+        <canvas id="signCanvas" width="760" height="140"></canvas>
+        <div style="display:flex; gap:10px; justify-content:center; margin-top:8px;">
+          <button type="button" id="clearSignBtn" class="secondary">مسح</button>
+          <button type="button" id="saveSignPreview" class="secondary">معاينة التوقيع</button>
+        </div>
       </div>
 
       <!-- STEP 5: التاريخ والوقت + ملاحظات -->
