@@ -5,8 +5,10 @@
 
   <title>نموذج تسليم المركبة - تفاعلي</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
+
    h1 a[href="https://qzqan94-ui.github.io/jeme-vehicle/"] {
   display: none;
 
@@ -93,6 +95,36 @@ select {
   border-radius: 6px;
   box-sizing: border-box;
 }
+
+/* إعدادات صفحة النتائج كما كانت */
+.result-page {
+  width: auto;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+.result-page table {
+  width: auto;
+  border-collapse: collapse;
+}
+
+.result-page th,
+.result-page td {
+  padding: 6px;
+  border: 1px solid #555;
+  text-align: center;
+}
+
+
+@media (max-width: 600px) {
+  .image-row { gap: 10px; }
+  .fuel-box { max-width: 100%; width: 48%; min-width: 120px; }
+  .car-box { width: 100%; }
+  input[type="text"], textarea, select { font-size: 14px; padding: 8px; }
+  .marker { width: 14px; height: 14px; }
+}
+
 
 
 }
@@ -1132,7 +1164,8 @@ function placeFuelMarkerOnResult(containerId, value) {
 		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
 	}
 	// ]]>
-
+</script>
+<script>
 (function() {
   const canvas = document.getElementById('signCanvas');
   const resizeCanvas = () => {
@@ -1167,6 +1200,7 @@ function placeFuelMarkerOnResult(containerId, value) {
   });
 })();
 </script>
+
 </body>
 </html>
 
