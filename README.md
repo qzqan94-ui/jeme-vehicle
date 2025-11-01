@@ -1,8 +1,6 @@
 
 <html lang="ar" dir="rtl">
-
 <head>
-  <div class="wrapper"></div>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>نموذج تسليم المركبة - تفاعلي</title>
@@ -11,25 +9,6 @@
 <style>
    h1 a[href="https://qzqan94-ui.github.io/jeme-vehicle/"] {
   display: none;
-}
-/* الحجم الطبيعي */
-.wrapper {
-  transform: scale(1);
-  transform-origin: top center;
-}
-
-/* شاشة أصغر من 768px → خليه يصغر شوي */
-@media (max-width: 768px) {
-  .wrapper {
-    transform: scale(0.85);
-  }
-}
-
-/* شاشة أصغر من 500px → يصغر أكثر */
-@media (max-width: 500px) {
-  .wrapper {
-    transform: scale(0.1);
-  }
 }
 
 input[type="text"],
@@ -368,9 +347,9 @@ th {
       <h1>نموذج تسليم المركبة — تفاعلي</h1><div class="progress"><div id="prog" style="width:0%">
       <div style="display:flex; align-items:center; justify-content:center; gap:10px; margin:20px 0;">
   <img src="1.g.jpg" alt="شعار وزارة الثقافة" style="height:50px;" />
-      </div><div>
+      </div></div>
   <h1 style="margin:0;">نموذج تسليم المركبة</h1>
-
+</div>
 
 <style>/* ✅ تنسيق عام للجدول داخل صفحة النتيجة */
 .result-page {
@@ -1068,7 +1047,6 @@ function placeFuelMarkerOnResult(containerId, value) {
 	}
 	// ]]>
 </script>
-</div>
 </body>
 </html>
 
