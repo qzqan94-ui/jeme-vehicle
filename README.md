@@ -775,7 +775,7 @@ function renderResult(){
       </tr>
     </table>
    
-   <div style="display:flex; align-items:center; justify-content:space-between; width:100%; direction:rtl; margin:20px 0;">
+   <div style="display:flex; align-items:center; justify-content:space-between; width:100%; direction:rtl; margin:77px 0;">
   <!-- الشعار في أقصى اليمين -->
   <img src="1.g.jpg" alt="شعار وزارة الثقافة" style="height:50px;">
 
