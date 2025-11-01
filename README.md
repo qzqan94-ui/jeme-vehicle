@@ -83,21 +83,14 @@ select {
   transform: translate(-50%, -50%);
   cursor: pointer;
 }
+
 #signCanvas {
-  width: 90% !important;
-  max-width: 600px;
-  height: 300px !important;
-  border: 2px solid #e07000;
+  width: 100% !important;
+  height: auto !important;
+  max-height: 180px;
   border-radius: 6px;
-  background: #fff;
   box-sizing: border-box;
-  touch-action: none;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
-
-
 
 .result-page {
   width: 100%;
@@ -1121,9 +1114,10 @@ function placeFuelMarkerOnResult(containerId, value) {
   cont.style.position = 'relative'; // لضمان أن موضع العلامة absolute يعمل
   cont.appendChild(m);
 }/* ملاحظة: هذه الصفحة تستخدم الصور المحلية: car.png.png و car bt.png */
+</script>
 
-
-
+<!-- Code injected by live-server -->
+<script>
 	// <![CDATA[  <-- For SVG support
 	if ('WebSocket' in window) {
 		(function () {
@@ -1160,85 +1154,7 @@ function placeFuelMarkerOnResult(containerId, value) {
 	}
 	// ]]>
   
-(function() {
-  const canvas = document.getElementById('signCanvas');
-  const resizeCanvas = () => {
-    if(!canvas) return;
-    const data = canvas.toDataURL();
-    const containerWidth = canvas.parentElement ? canvas.parentElement.clientWidth : canvas.clientWidth;
-    const ratio = Math.max(1, window.devicePixelRatio || 1);
-    const newW = Math.floor(containerWidth * ratio);
-    const newH = Math.floor(200 * ratio);
-    const temp = document.createElement('canvas');
-    temp.width = newW;
-    temp.height = newH;
-    const tctx = temp.getContext('2d');
-    const img = new Image();
-    img.onload = function(){
-      tctx.drawImage(img, 0, 0, temp.width, temp.height);
-      canvas.width = temp.width;
-      canvas.height = temp.height;
-      const ctx = canvas.getContext('2d');
-      ctx.clearRect(0,0,canvas.width,canvas.height);
-      ctx.drawImage(temp, 0, 0);
-      canvas.style.width = '100%';
-      canvas.style.height = 'auto';
-    };
-    if(data) img.src = data;
-  };
-
-  window.addEventListener('load', resizeCanvas);
-  window.addEventListener('resize', () => {
-    clearTimeout(window._resizeCanvasTimer);
-    window._resizeCanvasTimer = setTimeout(resizeCanvas, 120);
-  });
-const signCanvas = document.getElementById('signCanvas');
-signCanvas.width = signCanvas.offsetWidth;
-signCanvas.height = signCanvas.offsetHeight;
-const sctx = signCanvas.getContext('2d');
-sctx.strokeStyle = '#000';
-sctx.lineWidth = 2.6;
-sctx.lineCap = 'round';
-
-let drawing = false, lastX = 0, lastY = 0;
-
-function getPos(e){
-  const r = signCanvas.getBoundingClientRect();
-  if(e.touches && e.touches[0]) return {x:e.touches[0].clientX - r.left, y:e.touches[0].clientY - r.top};
-  return {x:e.clientX - r.left, y:e.clientY - r.top};
-}
-
-function start(e){ 
-  drawing = true;
-  const p = getPos(e); 
-  lastX = p.x; lastY = p.y; 
-  sctx.beginPath(); 
-  sctx.moveTo(lastX,lastY); 
-  e.preventDefault(); 
-}
-
-function move(e){
-  if(!drawing) return;
-  const p = getPos(e);
-  sctx.lineTo(p.x,p.y);
-  sctx.stroke();
-  lastX = p.x; lastY = p.y;
-  e.preventDefault();
-}
-
-function end(e){ drawing=false; e.preventDefault(); }
-
-signCanvas.addEventListener('mousedown', start);
-signCanvas.addEventListener('mousemove', move);
-signCanvas.addEventListener('mouseup', end);
-signCanvas.addEventListener('mouseleave', end);
-signCanvas.addEventListener('touchstart', start, {passive:false});
-signCanvas.addEventListener('touchmove', move, {passive:false});
-signCanvas.addEventListener('touchend', end);
-
-})();
 </script>
-
 </body>
 </html>
 
