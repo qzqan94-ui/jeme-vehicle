@@ -1,16 +1,12 @@
 
 <html lang="ar" dir="rtl">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>نموذج تسليم المركبة - تفاعلي</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
 <style>
-
-   h1 a[href="https://qzqan94-ui.github.io/jeme-vehicle/"] {
-  display: none;
 
 
 /* ===== استجابة عامة ===== */
@@ -118,6 +114,8 @@ select {
 }
 
 
+   h1 a[href="https://qzqan94-ui.github.io/jeme-vehicle/"] {
+  display: none;
 }
 
 input[type="text"],
@@ -1116,10 +1114,9 @@ function placeFuelMarkerOnResult(containerId, value) {
   cont.style.position = 'relative'; // لضمان أن موضع العلامة absolute يعمل
   cont.appendChild(m);
 }/* ملاحظة: هذه الصفحة تستخدم الصور المحلية: car.png.png و car bt.png */
-</script>
 
-<!-- Code injected by live-server -->
-<script>
+
+
 	// <![CDATA[  <-- For SVG support
 	if ('WebSocket' in window) {
 		(function () {
@@ -1155,8 +1152,7 @@ function placeFuelMarkerOnResult(containerId, value) {
 		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
 	}
 	// ]]>
-</script>
-<script>
+  
 (function() {
   const canvas = document.getElementById('signCanvas');
   const resizeCanvas = () => {
@@ -1190,8 +1186,8 @@ function placeFuelMarkerOnResult(containerId, value) {
     window._resizeCanvasTimer = setTimeout(resizeCanvas, 120);
   });
 })();
-</script>
 
+</script>
 </body>
 </html>
 
