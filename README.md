@@ -556,11 +556,12 @@ th {
         <label>اسم المستلم</label>
         <input type="text" id="receiverName" placeholder="اكتب اسم المستلم هنا" />
         <label style="margin-top:10px;">التوقيع الإلكتروني (ارسم هنا)</label>
-        <canvas id="signCanvas" width="760" height="140"></canvas>
-        <div style="display:flex; gap:10px; justify-content:center; margin-top:8px;">
-          <button type="button" id="clearSignBtn" class="secondary">مسح</button>
-          <button type="button" id="saveSignPreview" class="secondary">معاينة التوقيع</button>
-        </div>
+<canvas id="signCanvas" width="760" height="300"></canvas>
+<div style="display:flex; gap:10px; justify-content:center; margin-top:8px;">
+  <button type="button" id="clearSignBtn" class="secondary">مسح</button>
+  <button type="button" id="saveSignPreview" class="secondary">معاينة التوقيع</button>
+</div>
+
       </div>
 
       <!-- STEP 5: التاريخ والوقت + ملاحظات -->
