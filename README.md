@@ -83,6 +83,19 @@ select {
   transform: translate(-50%, -50%);
   cursor: pointer;
 }
+#signCanvas {
+  width: 90% !important;
+  max-width: 600px;
+  height: 300px !important;
+  border: 2px solid #e07000;
+  border-radius: 6px;
+  background: #fff;
+  box-sizing: border-box;
+  touch-action: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 
 
