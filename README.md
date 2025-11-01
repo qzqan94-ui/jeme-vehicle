@@ -92,7 +92,7 @@ select {
   background: #fff;
   box-sizing: border-box;
   touch-action: none;
-  display: none;
+  display: block;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1192,9 +1192,53 @@ function placeFuelMarkerOnResult(containerId, value) {
     clearTimeout(window._resizeCanvasTimer);
     window._resizeCanvasTimer = setTimeout(resizeCanvas, 120);
   });
-})();
+const signCanvas = document.getElementById('signCanvas');
+signCanvas.width = signCanvas.offsetWidth;
+signCanvas.height = signCanvas.offsetHeight;
+const sctx = signCanvas.getContext('2d');
+sctx.strokeStyle = '#000';
+sctx.lineWidth = 2.6;
+sctx.lineCap = 'round';
 
+let drawing = false, lastX = 0, lastY = 0;
+
+function getPos(e){
+  const r = signCanvas.getBoundingClientRect();
+  if(e.touches && e.touches[0]) return {x:e.touches[0].clientX - r.left, y:e.touches[0].clientY - r.top};
+  return {x:e.clientX - r.left, y:e.clientY - r.top};
+}
+
+function start(e){ 
+  drawing = true;
+  const p = getPos(e); 
+  lastX = p.x; lastY = p.y; 
+  sctx.beginPath(); 
+  sctx.moveTo(lastX,lastY); 
+  e.preventDefault(); 
+}
+
+function move(e){
+  if(!drawing) return;
+  const p = getPos(e);
+  sctx.lineTo(p.x,p.y);
+  sctx.stroke();
+  lastX = p.x; lastY = p.y;
+  e.preventDefault();
+}
+
+function end(e){ drawing=false; e.preventDefault(); }
+
+signCanvas.addEventListener('mousedown', start);
+signCanvas.addEventListener('mousemove', move);
+signCanvas.addEventListener('mouseup', end);
+signCanvas.addEventListener('mouseleave', end);
+signCanvas.addEventListener('touchstart', start, {passive:false});
+signCanvas.addEventListener('touchmove', move, {passive:false});
+signCanvas.addEventListener('touchend', end);
+
+})();
 </script>
+
 </body>
 </html>
 
