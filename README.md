@@ -86,10 +86,13 @@ select {
 
 #signCanvas {
   width: 100% !important;
-  height: auto !important;
-  max-height: 180px;
+  max-width: 500px;     /* أقصى عرض على الكمبيوتر */
+  height: 200px !important;  /* ارتفاع مريح */
+  border: 1px solid #e07000;
   border-radius: 6px;
+  background: #fff;
   box-sizing: border-box;
+  touch-action: none;   /* يساعد الرسم بالشاشات */
 }
 
 .result-page {
@@ -1161,7 +1164,7 @@ function placeFuelMarkerOnResult(containerId, value) {
     const containerWidth = canvas.parentElement ? canvas.parentElement.clientWidth : canvas.clientWidth;
     const ratio = Math.max(1, window.devicePixelRatio || 1);
     const newW = Math.floor(containerWidth * ratio);
-    const newH = Math.floor(140 * ratio * (containerWidth / 760));
+    const newH = Math.floor(200 * ratio);
     const temp = document.createElement('canvas');
     temp.width = newW;
     temp.height = newH;
