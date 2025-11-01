@@ -1160,40 +1160,6 @@ function placeFuelMarkerOnResult(containerId, value) {
 	}
 	// ]]>
   
-(function() {
-  const canvas = document.getElementById('signCanvas');
-  const resizeCanvas = () => {
-    if(!canvas) return;
-    const data = canvas.toDataURL();
-    const containerWidth = canvas.parentElement ? canvas.parentElement.clientWidth : canvas.clientWidth;
-    const ratio = Math.max(1, window.devicePixelRatio || 1);
-    const newW = Math.floor(containerWidth * ratio);
-    const newH = Math.floor(200 * ratio);
-    const temp = document.createElement('canvas');
-    temp.width = newW;
-    temp.height = newH;
-    const tctx = temp.getContext('2d');
-    const img = new Image();
-    img.onload = function(){
-      tctx.drawImage(img, 0, 0, temp.width, temp.height);
-      canvas.width = temp.width;
-      canvas.height = temp.height;
-      const ctx = canvas.getContext('2d');
-      ctx.clearRect(0,0,canvas.width,canvas.height);
-      ctx.drawImage(temp, 0, 0);
-      canvas.style.width = '100%';
-      canvas.style.height = 'auto';
-    };
-    if(data) img.src = data;
-  };
-
-  window.addEventListener('load', resizeCanvas);
-  window.addEventListener('resize', () => {
-    clearTimeout(window._resizeCanvasTimer);
-    window._resizeCanvasTimer = setTimeout(resizeCanvas, 120);
-  });
-})();
-
 </script>
 </body>
 </html>
