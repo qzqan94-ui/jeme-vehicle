@@ -84,16 +84,6 @@ select {
   cursor: pointer;
 }
 
-#signCanvas {
-  width: 100% !important;
-  max-width: 500px;     /* أقصى عرض على الكمبيوتر */
-  height: 200px !important;  /* ارتفاع مريح */
-  border: 1px solid #e07000;
-  border-radius: 6px;
-  background: #fff;
-  box-sizing: border-box;
-  touch-action: none;   /* يساعد الرسم بالشاشات */
-}
 
 .result-page {
   width: 100%;
