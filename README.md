@@ -85,33 +85,11 @@ select {
   cursor: pointer;
 }
 
-#signCanvas {
-  width: 100% !important;
-  height: auto !important;
-  max-height: 180px;
-  border-radius: 6px;
-  box-sizing: border-box;
-}
+
 /* رجوع صفحة النتائج لشكلها الأصلي */
-.result-page {
-  width: auto;
-  box-sizing: border-box;
-  overflow: visible;
-}
-
-.result-page table {
-  width: auto;
-  border-collapse: collapse;
-}
 
 
-@media (max-width: 600px) {
-  .image-row { gap: 10px; }
-  .fuel-box { max-width: 100%; width: 48%; min-width: 120px; }
-  .car-box { width: 100%; }
-  input[type="text"], textarea, select { font-size: 14px; padding: 8px; }
-  .marker { width: 14px; height: 14px; }
-}
+
 
 
 
