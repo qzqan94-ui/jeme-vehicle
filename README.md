@@ -348,7 +348,7 @@ canvas {
   max-width: 100%;
   height: auto;
   display: block;
-  margin: 5px auto;
+  margin: 7px auto;
 }
 
 /*=============================
