@@ -92,19 +92,18 @@ select {
   border-radius: 6px;
   box-sizing: border-box;
 }
-
+/* رجوع صفحة النتائج لشكلها الأصلي */
 .result-page {
-  width: 100%;
+  width: auto;
   box-sizing: border-box;
-  overflow-x: auto;
+  overflow: visible;
 }
 
-.result-page table, table {
-  width: 100%;
-  max-width: 100%;
+.result-page table {
+  width: auto;
   border-collapse: collapse;
-  box-sizing: border-box;
 }
+
 
 @media (max-width: 600px) {
   .image-row { gap: 10px; }
