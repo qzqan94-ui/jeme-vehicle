@@ -83,6 +83,18 @@ select {
   transform: translate(-50%, -50%);
   cursor: pointer;
 }
+#signCanvas {
+  width: 90% !important;         /* يأخذ معظم عرض الخلية */
+  max-width: 600px;              /* أقصى عرض على الكمبيوتر */
+  height: 300px !important;      /* ارتفاع كبير للتوقيع */
+  border: 2px solid #e07000;     /* إطار واضح */
+  border-radius: 6px;
+  background: #fff;
+  box-sizing: border-box;
+  touch-action: none;            /* يتيح الرسم على الشاشات اللمسية */
+  display: block;
+  margin: 20px auto;             /* توسيط أفقي ومسافة من الأعلى والأسفل */
+}
 
 
 .result-page {
