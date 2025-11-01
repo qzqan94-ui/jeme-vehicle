@@ -2,6 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
+
   <title>نموذج تسليم المركبة - تفاعلي</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,89 +10,6 @@
    h1 a[href="https://qzqan94-ui.github.io/jeme-vehicle/"] {
   display: none;
 }
-
-/* ===== استجابة عامة ===== */
-:root {
-  --accent: #ff8c00;
-  --muted: #666;
-  --card: #fff;
-}
-
-.container {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 12px;
-  box-sizing: border-box;
-}
-
-.step {
-  width: 100%;
-  display: none;
-  padding: 6px 4px;
-}
-.step.active { display: block; }
-
-input[type="text"],
-input[type="number"],
-input[type="date"],
-input[type="time"],
-textarea,
-select {
-  width: 100%;
-  box-sizing: border-box;
-  font-size: 15px;
-  padding: 8px 10px;
-  border-radius: 6px;
-  border: 1px solid #e07000;
-  text-align: center;
-}
-
-.image-row {
-  display: flex;
-  gap: 18px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 8px;
-}
-
-.car-box, .fuel-box {
-  position: relative;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  overflow: hidden;
-  background: #fff;
-  box-sizing: border-box;
-}
-
-.car-box { width: 520px; max-width: 100%; }
-.fuel-box { width: 260px; max-width: 48%; min-width: 140px; padding: 8px; }
-
-.car-box img, .fuel-box img {
-  display: block;
-  width: 100%;
-  height: auto;
-  user-select: none;
-}
-
-.marker {
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: rgba(255,0,0,.85);
-  border: 2px solid #800;
-  transform: translate(-50%, -50%);
-  cursor: pointer;
-}
-
-
-/* رجوع صفحة النتائج لشكلها الأصلي */
-
-
-
-
-
 
 input[type="text"],
 input[type="number"],
@@ -1128,42 +1046,7 @@ function placeFuelMarkerOnResult(containerId, value) {
 		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
 	}
 	// ]]>
-
-(function() {
-  const canvas = document.getElementById('signCanvas');
-  const resizeCanvas = () => {
-    if(!canvas) return;
-    const data = canvas.toDataURL();
-    const containerWidth = canvas.parentElement ? canvas.parentElement.clientWidth : canvas.clientWidth;
-    const ratio = Math.max(1, window.devicePixelRatio || 1);
-    const newW = Math.floor(containerWidth * ratio);
-    const newH = Math.floor(140 * ratio * (containerWidth / 760));
-    const temp = document.createElement('canvas');
-    temp.width = newW;
-    temp.height = newH;
-    const tctx = temp.getContext('2d');
-    const img = new Image();
-    img.onload = function(){
-      tctx.drawImage(img, 0, 0, temp.width, temp.height);
-      canvas.width = temp.width;
-      canvas.height = temp.height;
-      const ctx = canvas.getContext('2d');
-      ctx.clearRect(0,0,canvas.width,canvas.height);
-      ctx.drawImage(temp, 0, 0);
-      canvas.style.width = '100%';
-      canvas.style.height = 'auto';
-    };
-    if(data) img.src = data;
-  };
-
-  window.addEventListener('load', resizeCanvas);
-  window.addEventListener('resize', () => {
-    clearTimeout(window._resizeCanvasTimer);
-    window._resizeCanvasTimer = setTimeout(resizeCanvas, 120);
-  });
-})();
 </script>
-
 </body>
 </html>
 
