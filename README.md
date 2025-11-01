@@ -676,22 +676,78 @@ const getFuelAfter = enableFuel('fuelAfterBox','fuelAfterSelect');
 /* ====== لوحة التوقيع (canvas) ====== */
 const signCanvas = document.getElementById('signCanvas');
 const sctx = signCanvas.getContext('2d');
-let drawing=false, lastX=0, lastY=0;
-function getPos(e){
-  const r = signCanvas.getBoundingClientRect();
-  if(e.touches && e.touches[0]) return {x: e.touches[0].clientX - r.left, y: e.touches[0].clientY - r.top};
-  return {x: e.clientX - r.left, y: e.clientY - r.top};
+
+let drawing = false;
+let lastX = 0;
+let lastY = 0;
+
+// ضبط الإعدادات
+sctx.lineWidth = 3;
+sctx.lineCap = "round";
+sctx.strokeStyle = "#000";
+
+// الحصول على الإحداثيات
+function getPos(e) {
+  const rect = signCanvas.getBoundingClientRect();
+  if (e.touches && e.touches[0]) {
+    return {
+      x: e.touches[0].clientX - rect.left,
+      y: e.touches[0].clientY - rect.top
+    };
+  }
+  return {
+    x: e.clientX - rect.left,
+    y: e.clientY - rect.top
+  };
 }
-function start(e){ drawing=true; const p=getPos(e); lastX=p.x; lastY=p.y; sctx.beginPath(); sctx.moveTo(lastX,lastY); e.preventDefault(); }
-function move(e){ if(!drawing) return; const p=getPos(e); sctx.lineTo(p.x,p.y); sctx.strokeStyle='#000'; sctx.lineWidth=2.6; sctx.lineCap='round'; sctx.stroke(); lastX=p.x; lastY=p.y; e.preventDefault(); }
-function end(e){ drawing=false; e.preventDefault(); }
-signCanvas.addEventListener('mousedown', start); signCanvas.addEventListener('mousemove', move); signCanvas.addEventListener('mouseup', end); signCanvas.addEventListener('mouseleave', end);
-signCanvas.addEventListener('touchstart', start, {passive:false}); signCanvas.addEventListener('touchmove', move, {passive:false}); signCanvas.addEventListener('touchend', end);
-document.getElementById('clearSignBtn').addEventListener('click', ()=> sctx.clearRect(0,0,signCanvas.width,signCanvas.height));
-document.getElementById('saveSignPreview').addEventListener('click', ()=>{
-  const w = window.open('','_blank'); w.document.write(`<img src="${signCanvas.toDataURL()}" style="max-width:100%;">`);
+
+// بدء الرسم
+function start(e) {
+  e.preventDefault();
+  drawing = true;
+  const p = getPos(e);
+  lastX = p.x;
+  lastY = p.y;
+  sctx.beginPath();
+  sctx.moveTo(lastX, lastY);
+}
+
+// متابعة الرسم
+function move(e) {
+  if (!drawing) return;
+  e.preventDefault();
+  const p = getPos(e);
+  sctx.lineTo(p.x, p.y);
+  sctx.stroke();
+  lastX = p.x;
+  lastY = p.y;
+}
+
+// إيقاف
+function end() {
+  drawing = false;
+}
+
+// Events
+signCanvas.addEventListener("mousedown", start);
+signCanvas.addEventListener("mousemove", move);
+signCanvas.addEventListener("mouseup", end);
+signCanvas.addEventListener("mouseleave", end);
+
+signCanvas.addEventListener("touchstart", start, { passive: false });
+signCanvas.addEventListener("touchmove", move, { passive: false });
+signCanvas.addEventListener("touchend", end);
+
+// زر مسح
+document.getElementById("clearSignBtn").addEventListener("click", () => {
+  sctx.clearRect(0, 0, signCanvas.width, signCanvas.height);
 });
 
+// عرض معاينة
+document.getElementById("saveSignPreview").addEventListener("click", () => {
+  const w = window.open('', '_blank');
+  w.document.write(`<img src="${signCanvas.toDataURL()}" style="max-width:100%;">`);
+});
 /* ====== توليد صفحة النتيجة بتنسيق الطلب ====== */
 function renderResult(){
   // جمع البيانات
