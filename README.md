@@ -1117,7 +1117,28 @@ document.addEventListener('click', function(e){
                 pdf.addPage();
                 pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
                 heightLeft -= pageHeight;
-            }
+            }  const scale = imgHeight / (pdfHeight * 2);
+
+            // الصفحة الأولى
+            pdf.addImage(
+                imgData,
+                'PNG',
+                0,
+                0,
+                imgWidth,
+                imgHeight / scale
+            );
+
+            // الصفحة الثانية
+            pdf.addPage();
+            pdf.addImage(
+                imgData,
+                'PNG',
+                0,
+                -pdfHeight, // نقل الجزء الثاني من الصورة
+                imgWidth,
+                imgHeight / scale
+            );
 
             // 6. حفظ الملف باسم محدد
             pdf.save('نموذج-تسليم-مركبة.pdf');
