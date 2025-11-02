@@ -1086,13 +1086,15 @@ document.addEventListener('click', function(e){
 
         const element = document.getElementById('result');
 
-        const options = {
-            scale: 0,9 // يمكنك تعديلها لتصغير الصورة إذا كانت كبيرة
-            useCORS: true,
-            allowTaint: true,
-            scrollY: 0,
-            windowWidth: element.scrollWidth
-        };
+       const options = {
+    scale: 1,
+    useCORS: true,
+    allowTaint: true,
+    scrollY: 0,
+    windowWidth: element.scrollWidth,
+    backgroundColor: '#fff' // هذا يحفظ اللون الأبيض كما هو
+};
+
 
         html2canvas(element, options).then((canvas) => {
             const imgData = canvas.toDataURL('image/png');
