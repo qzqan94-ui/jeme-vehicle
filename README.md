@@ -345,7 +345,7 @@ canvas {
 }
 
 .result-page img {
-  max-width: 80%;
+  max-width: 100%;
   height: auto;
   display: block;
   margin: 7px auto;
