@@ -795,7 +795,7 @@ function renderResult(){
       font-size: 16px
     }
     .car-container img, .fuel-container img {
-      max-height: 159px;
+      max-height: 120px;
     }
     .signature-table {
       page-break-inside: avoid;
