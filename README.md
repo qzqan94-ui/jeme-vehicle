@@ -8,37 +8,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <style>
 
-/* تصغير طول صفحة النتيجة */
-.result-page {
-  margin-top: 10px !important;      /* تقليل المسافة العلوية */
-  padding: 10px !important;         /* تقليل الحشو داخل الصفحة */
-}
-
-/* تصغير الجداول داخل الصفحة */
-.result-page table {
-  margin-bottom: 10px !important;   /* تقليل المسافة بين الجداول */
-  font-size: 11px !important;       /* تصغير حجم الخط */
-}
-
-/* تقليل الحشو داخل خلايا الجدول */
-.result-page th,
-.result-page td {
-  padding: 4px 6px !important;      /* تصغير المسافة داخل الخلايا */
-}
-
-/* تقليل المسافات بين الفقرات والقوائم */
-.result-page p,
-.result-page ol,
-.result-page li {
-  margin: 2px 0 !important;
-  line-height: 1.2 !important;
-}
-
-/* تصغير الصور داخل الصناديق */
-.car-container img,
-.fuel-container img {
-  max-height: 120px !important;     /* تقليل ارتفاع الصور */
-}
 
 /* ===== استجابة عامة ===== */
 :root {
@@ -379,7 +348,7 @@ canvas {
   max-width: 100%;
   height: auto;
   display: block;
-  margin: 7px auto;
+  margin: -1px auto;
 }
 
 /*=============================
@@ -413,7 +382,7 @@ th {
   color: #555;
   font-size: 14px;
   text-align: center;
-  margin-top: 6px;
+  margin-top: -9px;
 }
 
 .name {
@@ -826,7 +795,7 @@ function renderResult(){
       font-size: 16px
     }
     .car-container img, .fuel-container img {
-      max-height: 120px;
+      max-height: 129px;
     }
     .signature-table {
       page-break-inside: avoid;
