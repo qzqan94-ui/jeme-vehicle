@@ -1087,7 +1087,7 @@ document.addEventListener('click', function(e){
         const element = document.getElementById('result');
 
         const options = {
-            scale: 1, // يمكنك تعديلها لتصغير الصورة إذا كانت كبيرة
+            scale: 0,9 // يمكنك تعديلها لتصغير الصورة إذا كانت كبيرة
             useCORS: true,
             allowTaint: true,
             scrollY: 0,
