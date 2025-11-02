@@ -348,7 +348,7 @@ canvas {
   max-width: 100%;
   height: auto;
   display: block;
-  margin: 7px auto;
+  margin: -6px auto;
 }
 
 /*=============================
@@ -458,7 +458,7 @@ th {
 }
 
 .result-page table {
-  width: 80%;        /* يمكنك تغييرها إلى 100% أو 80% حسب الحاجة */
+  width: 96%;        /* يمكنك تغييرها إلى 100% أو 80% حسب الحاجة */
   margin: 0; /* توسيط الجدول في الصفحة */
   border-collapse: collapse;
   font-size: 12px;
@@ -468,7 +468,7 @@ th {
 .result-page th,
 .result-page td {
   border: 1px solid #000;
-  padding: 1px 10px;
+  padding: 8px 10px;
   text-align: center;
 }
 </style>
