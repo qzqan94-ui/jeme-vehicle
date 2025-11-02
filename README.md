@@ -1078,46 +1078,35 @@ function escapeHtml(s){
 
 /* زر العودة والطباعة وإعادة تعبئة النموذج */
 /* ✅ كود جديد: استخدام jsPDF لحفظ الملف مباشرة كـ PDF */
-document.addEventListener('click', function(e){
-    if(e.target.matches('.print-btn') || e.target.matches('button.print')) {
-        
-        // 1. إخفاء الزر مؤقتاً قبل بدء عملية التحويل
+document.addEventListener('click', function(e) {
+    if (e.target.matches('.print-btn') || e.target.matches('button.print')) {
+
         const printBtn = e.target;
         printBtn.style.display = 'none';
 
-        // 2. تحديد العنصر المراد تحويله (صفحة النتيجة)
-        const element = document.getElementById('result'); 
+        const element = document.getElementById('result');
 
-        // 3. خيارات التحويل (ملاحظة: للحصول على أفضل نتيجة، قد تحتاج لضبطها)
         const options = {
-            scale: 0.9, // تصغير لتناسب الصفحة
-            useCORS: true,
+            scale: 2, // زيادة الدقة للحفاظ على جودة الألوان
+            useCORS: true, // تحميل الصور الخارجية بشكل صحيح
             allowTaint: true,
             scrollY: 0,
-            windowWidth: document.getElementById('result').scrollWidth
+            backgroundColor: null, // null للحفاظ على ألوان الخلفية كما هي
+            windowWidth: element.scrollWidth
         };
 
-        // 4. استخدام html2canvas لإنشاء صورة من محتوى HTML
         html2canvas(element, options).then((canvas) => {
             const imgData = canvas.toDataURL('image/png');
             const { jsPDF } = window.jspdf;
-            const pdf = new jsPDF('p', 'mm', 'a4'); // تهيئة ملف PDF جديد A4
-            const imgWidth = 210; // عرض A4 بالـ mm
-            const pageHeight = 295; // ارتفاع A4 بالـ mm
+            const pdf = new jsPDF('p', 'mm', 'a4');
+
+            const pdfWidth = 210; // عرض A4
+            const pdfHeight = 295; // ارتفاع A4
+            const imgWidth = pdfWidth;
             const imgHeight = canvas.height * imgWidth / canvas.width;
-            let heightLeft = imgHeight;
-            let position = 0;
 
-            // 5. إضافة الصورة إلى ملف PDF (مع التعامل مع الصفحات المتعددة)
-            pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
-            heightLeft -= pageHeight;
-
-            while (heightLeft >= 0) {
-                position = heightLeft - imgHeight;
-                pdf.addPage();
-                pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
-                heightLeft -= pageHeight;
-            }  const scale = imgHeight / (pdfHeight * 2);
+            // تقسيم الصورة على صفحتين بدون قص
+            const scale = imgHeight / (pdfHeight * 2);
 
             // الصفحة الأولى
             pdf.addImage(
@@ -1135,19 +1124,17 @@ document.addEventListener('click', function(e){
                 imgData,
                 'PNG',
                 0,
-                -pdfHeight, // نقل الجزء الثاني من الصورة
+                -pdfHeight,
                 imgWidth,
                 imgHeight / scale
             );
 
-            // 6. حفظ الملف باسم محدد
             pdf.save('نموذج-تسليم-مركبة.pdf');
-            
-            // 7. إعادة إظهار الزر بعد الانتهاء
-            printBtn.style.display = 'flex'; // أو 'block' حسب التنسيق الأصلي
+            printBtn.style.display = 'flex';
         });
     }
 });
+
 const markerBefore = document.getElementById('markerBefore');
   const fuelBeforeSelect = document.getElementById('fuelBeforeSelect');
 
