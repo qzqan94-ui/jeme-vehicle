@@ -322,7 +322,7 @@ canvas {
 ==============================*/
 .result-page {
   display: none;
-  margin-top: 75px;
+  margin-top: 10px;
   width: 98%;
   max-width: 100%;
   overflow-x: auto;
