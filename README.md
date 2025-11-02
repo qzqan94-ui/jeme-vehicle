@@ -34,16 +34,15 @@
 input[type="text"],
 input[type="number"],
 input[type="date"],
-input[type="time"],
-textarea,
-select {
-  width: 100%;
-  box-sizing: border-box;
-  font-size: 15px;
-  padding: 8px 10px;
-  border-radius: 6px;
-  border: 1px solid #e07000;
+textarea {
   text-align: center;
+  vertical-align: middle;
+  line-height: 1.6;
+  height: 26px;
+  padding: 0;
+  display: inline-block;
+  font-size: 16px;
+  font-family: inherit;
 }
 
 .image-row {
@@ -214,7 +213,7 @@ h1 {
 label {
   display: block;
   text-align: right;
-  margin: 8px 0;
+  margin:-5px 0;
   font-weight: 600;
 }
 
