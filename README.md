@@ -345,10 +345,10 @@ canvas {
 }
 
 .result-page img {
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
   display: block;
-  margin: -6px auto;
+  margin: 7px auto;
 }
 
 /*=============================
