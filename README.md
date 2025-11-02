@@ -459,7 +459,7 @@ th {
 
 .result-page table {
   width: 96%;        /* يمكنك تغييرها إلى 100% أو 80% حسب الحاجة */
-  margin: 0; /* توسيط الجدول في الصفحة */
+  margin: 14; /* توسيط الجدول في الصفحة */
   border-collapse: collapse;
   font-size: 12px;
   border: 1px solid #000;
