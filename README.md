@@ -931,11 +931,9 @@ function renderResult(){
         <td><span class="name">جمال محمد عبده حكمي</span></td><td></td><td><span class="name">جمال محمد عبده حكمي</span></td><td></td>
       </tr>
     </table>
-   <br><tr></tr>
-   <br><br><tr></tr>
-   <br><br><tr></tr>
-   <br><br><tr></tr>
-   <br>
+   <!-- عنصر فارغ على الجهة المقابلة للشعار للحفاظ على التمركز -->
+  <div style="width:50px;"></div>
+</div>
    <div style="display:flex; align-items:center; justify-content:space-between; width:100%; direction:rtl; margin:77px 0;">
   <!-- الشعار في أقصى اليمين -->
   <img src="1.g.jpg" alt="شعار وزارة الثقافة" style="height:50px;">
