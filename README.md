@@ -42,7 +42,7 @@ select {
   font-size: 15px;
   padding: 8px 10px;
   border-radius: 6px;
-  border: 1px solid #ccc;
+  border: 1px solid #fff;
   text-align: center;
 }
 
@@ -134,7 +134,7 @@ input[type="time"] {
   width: 98%;
   box-sizing: border-box;
   text-align: center;
-  border: 1px solid #aaa;
+  border: 1px solid #fff;
 }
 
 input[type="text"],
@@ -144,7 +144,7 @@ select {
   width: 100%;
   padding: 8px 10px;
   border-radius: 6px;
-  border: 1px solid #ccc;
+  border: 1px solid #fff;
   box-sizing: border-box;
   text-align: center;
 }
