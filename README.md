@@ -1,15 +1,103 @@
 
 <html lang="ar" dir="rtl">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8" />
-  
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>نموذج تسليم المركبة - تفاعلي</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <style>
 
 
 /* ===== استجابة عامة ===== */
+:root {
+  --accent: #ff8c00;
+  --muted: #666;
+  --card: #fff;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.step {
+  width: 100%;
+  display: none;
+  padding: 6px 4px;
+}
+.step.active { display: block; }
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+textarea,
+select {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.image-row {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.car-box, .fuel-box {
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.car-box { width: 520px; max-width: 100%; }
+.fuel-box { width: 260px; max-width: 48%; min-width: 140px; padding: 8px; }
+
+.car-box img, .fuel-box img {
+  display: block;
+  width: 100%;
+  height: auto;
+  user-select: none;
+}
+
+.marker {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(255,0,0,.85);
+  border: 2px solid #800;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+
+
+.result-page {
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: auto;
+}
+
+.result-page table, table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  box-sizing: border-box;
+}
 
 @media (max-width: 600px) {
   .image-row { gap: 10px; }
@@ -371,7 +459,7 @@ th {
 
 .result-page table {
   width: 96%;        /* يمكنك تغييرها إلى 100% أو 80% حسب الحاجة */
-  margin: 14; /* توسيط الجدول في الصفحة */
+  margin: 17; /* توسيط الجدول في الصفحة */
   border-collapse: collapse;
   font-size: 12px;
   border: 1px solid #000;
@@ -843,9 +931,7 @@ function renderResult(){
         <td><span class="name">جمال محمد عبده حكمي</span></td><td></td><td><span class="name">جمال محمد عبده حكمي</span></td><td></td>
       </tr>
     </table>
-   <!-- عنصر فارغ على الجهة المقابلة للشعار للحفاظ على التمركز -->
-  <div style="width:50px;"></div>
-</div>
+   
    <div style="display:flex; align-items:center; justify-content:space-between; width:100%; direction:rtl; margin:77px 0;">
   <!-- الشعار في أقصى اليمين -->
   <img src="1.g.jpg" alt="شعار وزارة الثقافة" style="height:50px;">
@@ -898,7 +984,7 @@ function renderResult(){
         <td>مستخدمة</td>
       </tr>
     </table>
-    <p style="text-align:right; font-size:15px;">للاستفسار يرحى التواصل مع مسئولي النقل في مثر الهيئة : <a href="tel:0545105222" style="color:blue; text-decoration:none;">(0545105222)</a><br><td><span class="name">الجهه هيئة التراث</span></td></p>
+    <p style="text-align:right; font-size:15px;">للاستفسار يرحى التواصل مع مسئولي النقل في مقر الهيئة : <a href="tel:0545105222" style="color:blue; text-decoration:none;">(0545105222)</a><br><td><span class="name">الجهه هيئة التراث</span></td></p>
     <br>
     <tr>
         <th></th><th></th><th>اسم المستلم</th><th></th>
@@ -910,7 +996,7 @@ function renderResult(){
         
         <td></td>
       </tr> <div class="datetime-cell" style="display:flex; justify-content:space-around; gap:8px; align-items:center;">
-            <label>تاريخ التسليم:</label>
+            <label>التاريخ :</label>
             <input type="date" id="resReturnDate" value="${escapeHtml(dateVal)}"><tr></tr>
             <input type="time" id="resReturnTime" value="${escapeHtml(timeVal)}">
           </div>
@@ -992,36 +1078,36 @@ function escapeHtml(s){
 
 /* زر العودة والطباعة وإعادة تعبئة النموذج */
 /* ✅ كود جديد: استخدام jsPDF لحفظ الملف مباشرة كـ PDF */
-document.addEventListener('click', function(e) {
-    if (e.target.matches('.print-btn') || e.target.matches('button.print')) {
-
+document.addEventListener('click', function(e){
+    if(e.target.matches('.print-btn') || e.target.matches('button.print')) {
+        
+        // 1. إخفاء الزر مؤقتاً قبل بدء عملية التحويل
         const printBtn = e.target;
         printBtn.style.display = 'none';
 
-        const element = document.getElementById('result');
+        // 2. تحديد العنصر المراد تحويله (صفحة النتيجة)
+        const element = document.getElementById('result'); 
 
+        // 3. خيارات التحويل (ملاحظة: للحصول على أفضل نتيجة، قد تحتاج لضبطها)
         const options = {
-            scale: 2, // زيادة الدقة للحفاظ على جودة الألوان
-            useCORS: true, // تحميل الصور الخارجية بشكل صحيح
+            scale: 0.9, // تصغير لتناسب الصفحة
+            useCORS: true,
             allowTaint: true,
             scrollY: 0,
-            backgroundColor: null, // null للحفاظ على ألوان الخلفية كما هي
-            windowWidth: element.scrollWidth
+            windowWidth: document.getElementById('result').scrollWidth
         };
 
+        // 4. استخدام html2canvas لإنشاء صورة من محتوى HTML
         html2canvas(element, options).then((canvas) => {
             const imgData = canvas.toDataURL('image/png');
             const { jsPDF } = window.jspdf;
-            const pdf = new jsPDF('p', 'mm', 'a4');
-
-            const pdfWidth = 210; // عرض A4
-            const pdfHeight = 295; // ارتفاع A4
-            const imgWidth = pdfWidth;
+            const pdf = new jsPDF('p', 'mm', 'a4'); // تهيئة ملف PDF جديد A4
+            const imgWidth = 210; // عرض A4 بالـ mm
+            const pageHeight = 295; // ارتفاع A4 بالـ mm
             const imgHeight = canvas.height * imgWidth / canvas.width;
 
-            // تقسيم الصورة على صفحتين بدون قص
-            const scale = imgHeight / (pdfHeight * 2);
-
+               const scale = imgHeight / (pdfHeight * 2);
+            let heightLeft = imgHeight;
             // الصفحة الأولى
             pdf.addImage(
                 imgData,
@@ -1048,7 +1134,6 @@ document.addEventListener('click', function(e) {
         });
     }
 });
-
 
 
 </script>
