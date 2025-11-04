@@ -1119,7 +1119,7 @@ document.addEventListener('click', function(e) {
                 imgHeight / scale
             );
 
-             const offsetBottom = 20; // مقدار النزول بالملليمتر
+             const offsetBottom = -10; // مقدار النزول بالملليمتر
             // الصفحة الثانية
             pdf.addPage();
             pdf.addImage(
