@@ -1105,9 +1105,9 @@ document.addEventListener('click', function(e){
             const imgWidth = 210; // عرض A4 بالـ mm
             const pageHeight = 295; // ارتفاع A4 بالـ mm
             const imgHeight = canvas.height * imgWidth / canvas.width;
-            let heightLeft = imgHeight;
-               const scale = imgHeight / (pdfHeight * 2);
 
+               const scale = imgHeight / (pdfHeight * 2);
+            let heightLeft = imgHeight;
             // الصفحة الأولى
             pdf.addImage(
                 imgData,
@@ -1139,5 +1139,6 @@ document.addEventListener('click', function(e){
 </script>
 </body>
 </html>
+
 
 
