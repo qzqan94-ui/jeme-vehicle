@@ -144,7 +144,7 @@ select {
   width: 100%;
   padding: 8px 10px;
   border-radius: 6px;
-  border: 1px solid #e07000;
+  border: 1px solid #ccc;
   box-sizing: border-box;
   text-align: center;
 }
