@@ -8,6 +8,59 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <style>
 
+
+/* ===== استجابة عامة ===== */
+
+@media (max-width: 600px) {
+  .image-row { gap: 10px; }
+  .fuel-box { max-width: 100%; width: 48%; min-width: 120px; }
+  .car-box { width: 100%; }
+  input[type="text"], textarea, select { font-size: 14px; padding: 8px; }
+  .marker { width: 14px; height: 14px; }
+}
+
+
+   h1 a[href="https://qzqan94-ui.github.io/jeme-vehicle/"] {
+  display: none;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1.6;
+  height: 26px;
+  padding: 0;
+  display: inline-block;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"] {
+  font-size: 13px;
+  padding: 0px 0px;
+  width: 98%;
+  box-sizing: border-box;
+  text-align: center;
+  border: 1px solid #aaa;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+select {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #e07000;
+  box-sizing: border-box;
+  text-align: center;
+}
+
 /*=============================
 =   GLOBAL
 ==============================*/
