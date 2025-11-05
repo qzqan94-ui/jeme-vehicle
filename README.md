@@ -869,12 +869,11 @@ function renderResult(){
 
       <tr><td style="direction: rtl; text-align: right;">
   <span class="signature1" style="margin-left:10px;">التوقيع:</span>
-  <img id="resSignImg" src="${signData}" alt="التوقيع" style="max-width:107px; border:1px solid #ccc; border-radius:6px;">
+  <img id="resSignImg" src="${signData}" alt="التوقيع" style="max-width:200px; border:1px solid #ccc; border-radius:6px;">
 </td>
 
-        <tr><td style="direction: rtl; text-align: right;">
-  <span class="signature1" style="margin-left:10px;">التوقيع:</span>
-  <img id="resSignImg" src="${signData}" alt="التوقيع" style="max-width:107px; border:1px solid #ccc; border-radius:6px;">
+        <td style="text-align: right;">
+  <span class="signature2">التوقيع:</span>
 </td>
 
       </tr>
@@ -908,9 +907,9 @@ function renderResult(){
       </tr>
       <tr>
         <td><input type="text" placeholder="اكتب الاسم هنا" style="width:95%; text-align:center;" value="${escapeHtml(receiver)}"></td>
-        <td id="resSignCell"><img id="resSignImg" src="${signData}" alt="التوقيع" style="max-width:200px; border:0px solid #ccc; border-radius:6px;"></td>
+        <td id="resSignCell"><img id="resSignImg" src="${signData}" alt="التوقيع" style="max-width:108px; border:0px solid #ccc; border-radius:6px;"></td>
         <td><input type="text" placeholder="اكتب الاسم هنا" style="width:95%; text-align:center;" value="${escapeHtml(receiver)}"></td>
-        <td id="resSignCell"><img id="resSignImg" src="${signData}" alt="التوقيع" style="max-width:200px; border:0px solid #ccc; border-radius:6px;"></td>
+        <td id="resSignCell"><img id="resSignImg" src="${signData}" alt="التوقيع" style="max-width:109px; border:0px solid #ccc; border-radius:6px;"></td>
       </tr>
       <tr>
         <th>صاحب الصلاحية</th><th>التوقيع</th><th>صاحب الصلاحية</th><th>التوقيع</th>
