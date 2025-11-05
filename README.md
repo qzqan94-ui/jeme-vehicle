@@ -42,7 +42,7 @@ select {
   font-size: 15px;
   padding: 8px 10px;
   border-radius: 6px;
-  border: 1px solid #fff;
+  border: 1px solid #e07000;
   text-align: center;
 }
 
@@ -134,7 +134,7 @@ input[type="time"] {
   width: 98%;
   box-sizing: border-box;
   text-align: center;
-  border: 1px solid #fff;
+  border: 1px solid #aaa;
 }
 
 input[type="text"],
@@ -144,7 +144,7 @@ select {
   width: 100%;
   padding: 8px 10px;
   border-radius: 6px;
-  border: 1px solid #fff;
+  border: 1px solid #e07000;
   box-sizing: border-box;
   text-align: center;
 }
@@ -459,7 +459,7 @@ th {
 
 .result-page table {
   width: 96%;        /* يمكنك تغييرها إلى 100% أو 80% حسب الحاجة */
-  margin: 17; /* توسيط الجدول في الصفحة */
+  margin: 14; /* توسيط الجدول في الصفحة */
   border-collapse: collapse;
   font-size: 12px;
   border: 1px solid #000;
@@ -984,7 +984,7 @@ function renderResult(){
         <td>مستخدمة</td>
       </tr>
     </table>
-    <p style="text-align:right; font-size:15px;">للاستفسار يرحى التواصل مع مسئولي النقل في مقر الهيئة : <a href="tel:0545105222" style="color:blue; text-decoration:none;">(0545105222)</a><br><td><span class="name">الجهه هيئة التراث</span></td></p>
+    <p style="text-align:right; font-size:15px;">للاستفسار يرحى التواصل مع مسئولي النقل في مثر الهيئة : <a href="tel:0545105222" style="color:blue; text-decoration:none;">(0545105222)</a><br><td><span class="name">الجهه هيئة التراث</span></td></p>
     <br>
     <tr>
         <th></th><th></th><th>اسم المستلم</th><th></th>
@@ -996,7 +996,7 @@ function renderResult(){
         
         <td></td>
       </tr> <div class="datetime-cell" style="display:flex; justify-content:space-around; gap:8px; align-items:center;">
-            <label>التاريخ :</label>
+            <label>تاريخ التسليم:</label>
             <input type="date" id="resReturnDate" value="${escapeHtml(dateVal)}"><tr></tr>
             <input type="time" id="resReturnTime" value="${escapeHtml(timeVal)}">
           </div>
@@ -1081,33 +1081,30 @@ function escapeHtml(s){
 document.addEventListener('click', function(e){
     if(e.target.matches('.print-btn') || e.target.matches('button.print')) {
         
-        // 1. إخفاء الزر مؤقتاً قبل بدء عملية التحويل
         const printBtn = e.target;
         printBtn.style.display = 'none';
 
-        // 2. تحديد العنصر المراد تحويله (صفحة النتيجة)
         const element = document.getElementById('result'); 
 
-        // 3. خيارات التحويل (ملاحظة: للحصول على أفضل نتيجة، قد تحتاج لضبطها)
         const options = {
-            scale: 0.9, // تصغير لتناسب الصفحة
+            scale: 0.9,
             useCORS: true,
             allowTaint: true,
             scrollY: 0,
-            windowWidth: document.getElementById('result').scrollWidth
+            windowWidth: element.scrollWidth
         };
 
-        // 4. استخدام html2canvas لإنشاء صورة من محتوى HTML
         html2canvas(element, options).then((canvas) => {
             const imgData = canvas.toDataURL('image/png');
             const { jsPDF } = window.jspdf;
-            const pdf = new jsPDF('p', 'mm', 'a4'); // تهيئة ملف PDF جديد A4
-            const imgWidth = 210; // عرض A4 بالـ mm
-            const pageHeight = 295; // ارتفاع A4 بالـ mm
+            const pdf = new jsPDF('p', 'mm', 'a4');
+
+            const imgWidth = 210; 
+            const pdfHeight = 295;      // ✅ تمت إضافته
             const imgHeight = canvas.height * imgWidth / canvas.width;
 
-               const scale = imgHeight / (pdfHeight * 2);
-            let heightLeft = imgHeight;
+            const scale = imgHeight / (pdfHeight * 2);   // ✅ الآن يعمل
+
             // الصفحة الأولى
             pdf.addImage(
                 imgData,
@@ -1134,6 +1131,7 @@ document.addEventListener('click', function(e){
         });
     }
 });
+
 
 
 </script>
