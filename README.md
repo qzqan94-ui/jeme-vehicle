@@ -6,7 +6,11 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>نموذج تسليم المركبة - تفاعلي</title>
   <style>
-   /*=============================
+.jeme-vehicle {
+  display: none !important;
+}
+
+	  /*=============================
 =   INPUTS & TEXTAREAS
 ==============================*/
 input[type="text"],
