@@ -86,19 +86,6 @@ select {
 
 
 
-.result-page {
-  width: 100%;
-  box-sizing: border-box;
-  overflow-x: auto;
-}
-
-.result-page table, table {
-  width: 100%;
-  max-width: 100%;
-  border-collapse: collapse;
-  box-sizing: border-box;
-}
-
 @media (max-width: 600px) {
   .image-row { gap: 10px; }
   .fuel-box { max-width: 100%; width: 48%; min-width: 120px; }
