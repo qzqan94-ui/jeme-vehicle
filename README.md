@@ -34,7 +34,7 @@
 input[type="text"],
 input[type="number"],
 input[type="date"],
-input[type=""],
+input[type="time"],
 textarea,
 select {
   width: 100%;
