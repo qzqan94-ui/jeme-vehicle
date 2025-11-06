@@ -27,7 +27,7 @@
 .step {
   width: 100%;
   display: none;
-  padding: 6px 16px;
+  padding: 6px 4px;
 }
 .step.active { display: block; }
 
@@ -907,9 +907,9 @@ function renderResult(){
       </tr>
       <tr>
         <td><input type="text" placeholder="اكتب الاسم هنا" style="width:95%; text-align:center;" value="${escapeHtml(receiver)}"></td>
-        <td id="resSignCell"><img id="resSignImg" src="${signData}" alt="التوقيع" style="max-width:108px; border:0px solid #ccc; border-radius:6px;"></td>
+        <td id="resSignCell"><img id="resSignImg" src="${signData}" alt="التوقيع" style="max-width:200px; border:0px solid #ccc; border-radius:6px;"></td>
         <td><input type="text" placeholder="اكتب الاسم هنا" style="width:95%; text-align:center;" value="${escapeHtml(receiver)}"></td>
-        <td id="resSignCell"><img id="resSignImg" src="${signData}" alt="التوقيع" style="max-width:109px; border:0px solid #ccc; border-radius:6px;"></td>
+        <td id="resSignCell"><img id="resSignImg" src="${signData}" alt="التوقيع" style="max-width:200px; border:0px solid #ccc; border-radius:6px;"></td>
       </tr>
       <tr>
         <th>صاحب الصلاحية</th><th>التوقيع</th><th>صاحب الصلاحية</th><th>التوقيع</th>
