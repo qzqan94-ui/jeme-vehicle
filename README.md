@@ -776,7 +776,7 @@ function renderResult(){
     }
     input[type="text"], input[type="date"], input[type="time"] {
       font-size: 17px;
-      padding: 2px 0px;
+      padding: 0px 0px;
     }
     h5 {
       font-size: 16px
