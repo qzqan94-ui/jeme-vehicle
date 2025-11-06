@@ -42,7 +42,7 @@ select {
   font-size: 15px;
   padding: 8px 10px;
   border-radius: 6px;
-  border: 1px solid #e07000;
+  border: 1px solid #aaa;
   text-align: center;
 }
 
