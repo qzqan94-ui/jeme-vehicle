@@ -970,7 +970,7 @@ function renderResult(){
         <td>مستخدمة</td>
       </tr>
     </table>
-    <p style="text-align:right; font-size:15px;">للاستفسار يرحى التواصل مع مسئولي النقل في مثر الهيئة : <a href="tel:0545105222" style="color:blue; text-decoration:none;">(0545105222)</a><br><td><span class="name">الجهه هيئة التراث</span></td></p>
+    <p style="text-align:right; font-size:15px;">للاستفسار يرحى التواصل مع مسئولي النقل في مقر الهيئة : <a href="tel:0545105222" style="color:blue; text-decoration:none;">(0545105222)</a><br><td><span class="name">الجهه هيئة التراث</span></td></p>
     <br>
     <tr>
         <th></th><th></th><th>اسم المستلم</th><th></th>
