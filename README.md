@@ -903,7 +903,7 @@ function renderResult(){
         <th class="section-title" colspan="2">التوقيع عند التسليم</th>
       </tr>
       <tr>
-        <th>اسم المستلم</th><th>التوقيع</th><th>اسم المستلم</th><th>التوقيع</th>
+        <th padding:30px;>اسم المستلم</th><th>التوقيع</th><th>اسم المستلم</th><th>التوقيع</th>
       </tr>
       <tr>
         <td><input type="text" placeholder="اكتب الاسم هنا" style="width:95%; text-align:center;" value="${escapeHtml(receiver)}"></td>
