@@ -897,31 +897,27 @@ function renderResult(){
       <tr><td><div class="declaration-box">أستقبال الوفود والزيارات الرسميه لإمارة المنطقة + أمانه المنطقة + البلديات والمحافظات +زيارات مواقع أثريه +زيارة جزر فرسان زغيرها </div></td></tr>
     </table>
 
-   <table>
-  <table>
-  <tr>
-    <th style="padding: 6px 30px;" class="section-title" colspan="2">التوقيع عند الاستلام</th>
-    <th class="section-title" colspan="2">التوقيع عند التسليم</th>
-  </tr>
-  <tr>
-    <th>اسم المستلم</th><th>التوقيع</th><th>اسم المستلم</th><th>التوقيع</th>
-  </tr>
-  <tr>
-    <td style="width: 75%;"><input type="text" placeholder="اكتب الاسم هنا" style="width:100%; text-align:center;" value="${escapeHtml(receiver)}"></td>
-    <td style="width: 25%;"><img id="resSignImg" src="${signData}" alt="التوقيع" style="max-width:200px; border:0px solid #ccc; border-radius:6px;"></td>
-    
-    <td style="width: 75%;"><input type="text" placeholder="اكتب الاسم هنا" style="width:100%; text-align:center;" value="${escapeHtml(receiver)}"></td>
-    <td style="width: 25%;"><img id="resSignImg" src="${signData}" alt="التوقيع" style="max-width:200px; border:0px solid #ccc; border-radius:6px;"></td>
-  </tr>
-  <tr>
-    <th>صاحب الصلاحية</th><th>التوقيع</th><th>صاحب الصلاحية</th><th>التوقيع</th>
-  </tr>
-  <tr>
-    <td style="width: 75%;"><span class="name">جمال محمد عبده حكمي</span></td><td style="width: 25%;"></td>
-    <td style="width: 75%;"><span class="name">جمال محمد عبده حكمي</span></td><td style="width: 25%;"></td>
-  </tr>
-</table>
-
+    <table>
+      <tr>
+        <th style= padding: 6px 30px; class="section-title" colspan="2">التوقيع عند الاستلام</th>
+        <th class="section-title" colspan="2">التوقيع عند التسليم</th>
+      </tr>
+      <tr>
+        <th>اسم المستلم</th><th>التوقيع</th><th>اسم المستلم</th><th>التوقيع</th>
+      </tr>
+      <tr>
+        <td><input type="text" placeholder="اكتب الاسم هنا" style="width:107%; text-align:center;" value="${escapeHtml(receiver)}"></td>
+        <td id="resSignCell"><img id="resSignImg" src="${signData}" alt="التوقيع" style="max-width:200px; border:0px solid #ccc; border-radius:6px;"></td>
+        <td><input type="text" placeholder="اكتب الاسم هنا" style="width:107%; text-align:center;" value="${escapeHtml(receiver)}"></td>
+        <td id="resSignCell"><img id="resSignImg" src="${signData}" alt="التوقيع" style="max-width:200px; border:0px solid #ccc; border-radius:6px;"></td>
+      </tr>
+      <tr>
+        <th>صاحب الصلاحية</th><th>التوقيع</th><th>صاحب الصلاحية</th><th>التوقيع</th>
+      </tr>
+      <tr>
+        <td><span class="name">جمال محمد عبده حكمي</span></td><td></td><td><span class="name">جمال محمد عبده حكمي</span></td><td></td>
+      </tr>
+    </table>
    <tr></tr>
    <td></td>
    <div style="display:flex; align-items:center; justify-content:space-between; width:100%; direction:rtl; margin:77px 0;">
