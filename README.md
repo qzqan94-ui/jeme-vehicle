@@ -1085,7 +1085,7 @@ document.addEventListener('click', function(e){
             const { jsPDF } = window.jspdf;
             const pdf = new jsPDF('p', 'mm', 'a4');
 
-            const imgWidth = 210; 
+            const imgWidth = 200; 
             const pdfHeight = 295;      // ✅ تمت إضافته
             const imgHeight = canvas.height * imgWidth / canvas.width;
 
