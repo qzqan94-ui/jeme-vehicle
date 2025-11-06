@@ -34,7 +34,7 @@
 input[type="text"],
 input[type="number"],
 input[type="date"],
-input[type="time"],
+input[type=""],
 textarea,
 select {
   width: 100%;
@@ -101,7 +101,7 @@ select {
 
 input[type="text"],
 input[type="number"],
-input[type="date"],
+input[type=""],
 textarea {
   text-align: center;
   vertical-align: middle;
@@ -115,7 +115,7 @@ textarea {
 
 input[type="text"],
 input[type="date"],
-input[type="time"] {
+input[type=""] {
   font-size: 13px;
   padding: 0px 0px;
   width: 98%;
@@ -126,12 +126,11 @@ input[type="time"] {
 
 input[type="text"],
 input[type="date"],
-input[type="time"],
 select {
   width: 100%;
   padding: 8px 10px;
   border-radius: 6px;
-  border: 1px solid #e07000;
+  border: 1px solid #f1eeeb;
   box-sizing: border-box;
   text-align: center;
 }
