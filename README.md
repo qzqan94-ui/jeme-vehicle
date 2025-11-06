@@ -903,10 +903,10 @@ function renderResult(){
         <th class="section-title" colspan="2">التوقيع عند التسليم</th>
       </tr>
       <tr>
-        <th padding:30px;>اسم المستلم</th><th>التوقيع</th><th>اسم المستلم</th><th>التوقيع</th>
+        <th>اسم المستلم</th><th>التوقيع</th><th>اسم المستلم</th><th>التوقيع</th>
       </tr>
       <tr>
-        <td><input type="text" placeholder="اكتب الاسم هنا" style="width:95%; text-align:center;" value="${escapeHtml(receiver)}"></td>
+        <td><input type="text" placeholder="اكتب الاسم هنا" style="width:150%; text-align:center;" value="${escapeHtml(receiver)}"></td>
         <td id="resSignCell"><img id="resSignImg" src="${signData}" alt="التوقيع" style="max-width:108px; border:0px solid #ccc; border-radius:6px;"></td>
         <td><input type="text" placeholder="اكتب الاسم هنا" style="width:95%; text-align:center;" value="${escapeHtml(receiver)}"></td>
         <td id="resSignCell"><img id="resSignImg" src="${signData}" alt="التوقيع" style="max-width:109px; border:0px solid #ccc; border-radius:6px;"></td>
