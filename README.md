@@ -955,11 +955,19 @@ function renderResult(){
         <th>اسم المستلم</th><th>التوقيع</th><th>اسم المستلم</th><th>التوقيع</th>
       </tr>
       <tr>
-        <td><input type="text" placeholder="اكتب الاسم هنا" style="width:107%; text-align:center;" value="${escapeHtml(receiver)}"></td>
-        <td id="resSignCell"><img id="resSignImg" src="${signData}" alt="التوقيع" style="max-width:200px; border:0px solid #ccc; border-radius:6px;"></td>
-        <td><input type="text" placeholder="اكتب الاسم هنا" style="width:107%; text-align:center;" value="${escapeHtml(receiver)}"></td>
-        <td id="resSignCell"><img id="resSignImg" src="${signData}" alt="التوقيع" style="max-width:200px; border:0px solid #ccc; border-radius:6px;"></td>
-      </tr>
+        <td style="width: 30%;">
+            <input type="text" placeholder="اكتب الاسم هنا" style="width: 95%; text-align:center;" value="${escapeHtml(receiver)}">
+        </td>
+        <td id="resSignCell" style="width: 20%;">
+            <img id="resSignImg" src="${signData}" alt="التوقيع" style="max-width:100%; height:auto; border:0px solid #ccc; border-radius:6px;">
+        </td>
+        <td style="width: 30%;">
+            <input type="text" placeholder="اكتب الاسم هنا" style="width: 95%; text-align:center;" value="${escapeHtml(receiver)}">
+        </td>
+        <td id="resSignCell" style="width: 20%;">
+            <img id="resSignImg" src="${signData}" alt="التوقيع" style="max-width:100%; height:auto; border:0px solid #ccc; border-radius:6px;">
+        </td>
+      </tr>
       <tr>
         <th>صاحب الصلاحية</th><th>التوقيع</th><th>صاحب الصلاحية</th><th>التوقيع</th>
       </tr>
@@ -980,8 +988,8 @@ function renderResult(){
   <div style="width:50px;"></div>
 </div>    
       <p>يتعهد المستخدم بما يلي بشأن استخدام سيارة الجهة:</p>
-      <ol style="padding-right:25px;">
-        <li>لا يسمح بقيادة السيارات لأي شخص لا يحمل رخصة قيادة سارية المفعول أو دون سن <strong>(21)وعلى ان يكون سائقي السيارات أحد مسئولي الوزارة او تحت كفالة الوزارة </strong> </li>
+      <ul style="list-style-type: none; padding-right: 0; padding-left: 0; margin-right: 20px;">
+       <li>لا يسمح بقيادة السيارات لأي شخص لا يحمل رخصة قيادة سارية المفعول أو دون سن <strong>(21)وعلى ان يكون سائقي السيارات أحد مسئولي الوزارة او تحت كفالة الوزارة </strong> </li>
        <br>
         <li>استخدام السيارة فقط للمهام الرسميه داخل وقت العمل أو خارجة , والالتزام بايقاف السيارة في موقع الوزارة أو الفرع بعد الانتهاء من المهمة مباشرة , وتسليم السيارة للفرع أو المكتب خلال الإجازات السنويه او الرسميه </li>
        <br>
@@ -1000,7 +1008,7 @@ function renderResult(){
         <li>يتحمل المسئول المخالف لهذا الشرو سحب المركبة منه لمدة شهر لأول مره ولمدة شهرين في المره الثانيه والسحب لمدة سته اشهر للمرة الثالثة مع تحمل المسئول القيام بواجباته ومسئوليات العمل بمركبته الخاصة خلال فترة السحب لعدم الالتزام بالمحافظة على المركبة المسلمة له </li>
       <br>
         <li>أقر بالاطلاع والتقيد بكافة الشروط الواردة في هذا التعهد.</li>
-      </ol>
+      </ul>
     </div>
 </tr>
 
