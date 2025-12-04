@@ -1131,7 +1131,7 @@ document.addEventListener('click', function(e){
         const element = document.getElementById('result'); 
 
         const options = {
-            scale: 6,
+            scale: 3,
             useCORS: true,
             allowTaint: true,
             scrollY: 0,
