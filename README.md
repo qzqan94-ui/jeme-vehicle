@@ -501,12 +501,11 @@ th {
 }
 #signCanvas {
     width: 100%;
-    max-width: 760px;
-    height: 140px;  /* مهم جدًا */
+    height: auto;
+    max-width: 760px;   /* أقصى عرض على الشاشات الكبيرة */
     border: 1px solid #ccc;
     display: block;
 }
-
 
 </style>
       <!-- STEP 1: بيانات المركبة الأساسية -->
@@ -615,23 +614,6 @@ th {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script>
-const canvas = document.getElementById("signCanvas");
-const ctx = canvas.getContext("2d");
-
-function resizeCanvas() {
-    const displayWidth = canvas.clientWidth;
-    const displayHeight = canvas.clientHeight;
-
-    canvas.width = displayWidth;   // يملى العرض بالكامل
-    canvas.height = displayHeight; // يبقى بارتفاع 140
-}
-
-resizeCanvas();
-window.addEventListener("resize", resizeCanvas);
-</script>
-
-<script>
-  
 /* ====== إدارة الخطوات وبروجرس ====== */
 const steps = ['step1','step2','step3','step4','step5'];
 let cur = 0;
@@ -1199,4 +1181,4 @@ document.addEventListener('click', function(e){
     <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
     <script>anchors.add();</script>
   </body>
-</html>
+</html> 
