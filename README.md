@@ -1132,58 +1132,81 @@ function escapeHtml(s){
 
 /* زر العودة والطباعة وإعادة تعبئة النموذج */
 /* ✅ كود جديد: استخدام jsPDF لحفظ الملف مباشرة كـ PDF */
-document.addEventListener('click', function(e){
-    if(e.target.matches('.print-btn') || e.target.matches('button.print')) {
-        
-        const printBtn = e.target;
-        printBtn.style.display = 'none';
+document.addEventListener('click', async function (e) {
+  if (!(e.target.matches('.print-btn') || e.target.matches('button.print'))) return;
 
-        const element = document.getElementById('result'); 
+  const printBtn = e.target;
+  printBtn.style.display = 'none';
 
-        const options = {
-            scale: 0.9,
-            useCORS: true,
-            allowTaint: true,
-            scrollY: 0,
-            windowWidth: element.scrollWidth
-        };
+  try {
+    const element = document.getElementById('result');
+    if (!element) throw new Error('عنصر #result غير موجود');
 
-        html2canvas(element, options).then((canvas) => {
-            const imgData = canvas.toDataURL('image/png');
-            const { jsPDF } = window.jspdf;
-            const pdf = new jsPDF('p', 'mm', 'a4');
+    // خيارات html2canvas - زد scale لتحسين الدقة إن أردت (2 أو 3)
+    const canvas = await html2canvas(element, {
+      scale: 2,
+      useCORS: true,
+      allowTaint: true,
+      scrollY: -window.scrollY  // يساعد إن كان العنصر خارج العرض
+    });
 
-            const imgWidth = 200; 
-            const pdfHeight = 295;      // ✅ تمت إضافته
-            const imgHeight = canvas.height * imgWidth / canvas.width;
+    // إعدادات PDF
+    const { jsPDF } = window.jspdf;
+    const pdf = new jsPDF('p', 'mm', 'a4');
+    const pdfWidthMm = 210;
+    const pdfHeightMm = 297;
 
-            const scale = imgHeight / (pdfHeight * 2);   // ✅ الآن يعمل
+    // عرض وارتفاع الـ canvas بالبيكسل
+    const canvasW = canvas.width;
+    const canvasH = canvas.height;
 
-            // الصفحة الأولى
-            pdf.addImage(
-                imgData,
-                'PNG',
-                0,
-                0,
-                imgWidth,
-                imgHeight / scale
-            );
+    // نحسب كم بيكسل يساوي 1 مم في هذا الـ canvas
+    const pxPerMm = canvasW / pdfWidthMm; // px لكل مم
 
-            // الصفحة الثانية
-            pdf.addPage();
-            pdf.addImage(
-                imgData,
-                'PNG',
-                0,
-                -pdfHeight,
-                imgWidth,
-                imgHeight / scale
-            );
+    // ارتفاع صفحة A4 بالبيكسل في هذه الصورة
+    const pageHeightPx = Math.floor(pxPerMm * pdfHeightMm);
 
-            pdf.save('نموذج-تسليم-مركبة.pdf');
-            printBtn.style.display = 'flex';
-        });
+    // دالة مساعدة لتقطيع صورة من y_start بطول sliceH ثم إرجاع dataURL
+    function sliceCanvasToDataURL(yStart, sliceH) {
+      const tmp = document.createElement('canvas');
+      tmp.width = canvasW;
+      tmp.height = sliceH;
+      const ctx = tmp.getContext('2d');
+      ctx.drawImage(canvas, 0, yStart, canvasW, sliceH, 0, 0, canvasW, sliceH);
+      return tmp.toDataURL('image/jpeg', 1.0);
     }
+
+    // الشريحة الأولى (من الأعلى)
+    const slice1H = Math.min(pageHeightPx, canvasH);
+    const img1 = sliceCanvasToDataURL(0, slice1H);
+    pdf.addImage(img1, 'JPEG', 0, 0, pdfWidthMm, pdfHeightMm);
+
+    // الشريحة الثانية — نأخذ بداية من pageHeightPx
+    const start2 = pageHeightPx;
+    // إذا لم تبقِ بكسلات كافية، نضع صفحة فارغة أو نأخذ المتبقي
+    if (start2 < canvasH) {
+      const remaining = canvasH - start2;
+      // نأخذ طولًا يساوي pageHeightPx إن أمكن (سنقص إن كان المتبقي أقل)
+      const slice2H = Math.min(pageHeightPx, remaining);
+      const img2 = sliceCanvasToDataURL(start2, slice2H);
+      pdf.addPage();
+      // إذا slice2H أقل من pageHeightPx فستنزل فقط جزء من الصفحة (باقي الصفحة ستكون بيضاء)
+      pdf.addImage(img2, 'JPEG', 0, 0, pdfWidthMm, (slice2H / pxPerMm));
+      // إذا أردت إجبار الصورة على ملء كامل ارتفاع الصفحة (ممتد/مشوه) لا تفعل هذه الحسبة، لكن لا ننصح بذلك.
+    } else {
+      // لا يوجد محتوى للصفحة الثانية → نضيف صفحة فارغة (اختياري)
+      pdf.addPage();
+    }
+
+    // حفظ الملف
+    pdf.save('نموذج-تسليم-مركبة.pdf');
+
+  } catch (err) {
+    console.error('خطأ أثناء توليد PDF:', err);
+    alert('حدث خطأ أثناء إنشاء ملف PDF. افتح الكونسول (F12) لمزيد من التفاصيل.\n' + (err && err.message ? err.message : ''));
+  } finally {
+    printBtn.style.display = 'flex';
+  }
 });
 
 
