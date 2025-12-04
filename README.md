@@ -501,11 +501,12 @@ th {
 }
 #signCanvas {
     width: 100%;
-    height: auto;
-    max-width: 760px;   /* أقصى عرض على الشاشات الكبيرة */
+    max-width: 760px;
+    height: 140px;     /* مهم جدًا حتى لا يختفي */
     border: 1px solid #ccc;
     display: block;
 }
+
 
 </style>
       <!-- STEP 1: بيانات المركبة الأساسية -->
@@ -621,8 +622,8 @@ function resizeCanvas() {
     const displayWidth = canvas.clientWidth;
     const displayHeight = canvas.clientHeight;
 
-    canvas.width = displayWidth;
-    canvas.height = displayHeight;
+    canvas.width = displayWidth;   // يملى العرض بالكامل
+    canvas.height = displayHeight; // يبقى بارتفاع 140
 }
 
 resizeCanvas();
@@ -1199,4 +1200,3 @@ document.addEventListener('click', function(e){
     <script>anchors.add();</script>
   </body>
 </html>
-
