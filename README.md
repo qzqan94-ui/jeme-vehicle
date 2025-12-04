@@ -1178,7 +1178,6 @@ document.addEventListener('click', function(e){
                 imgWidth,
                 imgHeight / scale
             );
-
             pdf.save('نموذج-تسليم-مركبة.pdf');
             printBtn.style.display = 'flex';
         });
