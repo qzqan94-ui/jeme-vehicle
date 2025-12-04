@@ -501,11 +501,12 @@ th {
 }
 #signCanvas {
     width: 100%;
-    height: auto;
-    max-width: 760px;   /* أقصى عرض على الشاشات الكبيرة */
+    max-width: 760px;
+    height: 140px;  /* مهم جدًا */
     border: 1px solid #ccc;
     display: block;
 }
+
 
 </style>
       <!-- STEP 1: بيانات المركبة الأساسية -->
@@ -1178,6 +1179,7 @@ document.addEventListener('click', function(e){
                 imgWidth,
                 imgHeight / scale
             );
+
             pdf.save('نموذج-تسليم-مركبة.pdf');
             printBtn.style.display = 'flex';
         });
