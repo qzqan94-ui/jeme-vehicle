@@ -1,11 +1,53 @@
 
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>jeme-vehicle</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="jeme-vehicle" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="https://qzqan94-ui.github.io/jeme-vehicle/" />
+<meta property="og:url" content="https://qzqan94-ui.github.io/jeme-vehicle/" />
+<meta property="og:site_name" content="jeme-vehicle" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="jeme-vehicle" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","headline":"jeme-vehicle","name":"jeme-vehicle","url":"https://qzqan94-ui.github.io/jeme-vehicle/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/jeme-vehicle/assets/css/style.css?v=ddc2f5fc523a238f2f230da148c03f9875a39d67">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/jeme-vehicle/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="https://qzqan94-ui.github.io/jeme-vehicle/">jeme-vehicle</a></h1>
+      
+
+      
 <html lang="ar" dir="rtl">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>نموذج تسليم المركبة - تفاعلي</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <style>
 
 
@@ -457,6 +499,14 @@ th {
   padding: 8px 10px;
   text-align: center;
 }
+#signCanvas {
+    width: 100%;
+    height: auto;
+    max-width: 760px;   /* أقصى عرض على الشاشات الكبيرة */
+    border: 1px solid #ccc;
+    display: block;
+}
+
 </style>
       <!-- STEP 1: بيانات المركبة الأساسية -->
       <div id="step1" class="step active">
@@ -564,6 +614,23 @@ th {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script>
+const canvas = document.getElementById("signCanvas");
+const ctx = canvas.getContext("2d");
+
+function resizeCanvas() {
+    const displayWidth = canvas.clientWidth;
+    const displayHeight = canvas.clientHeight;
+
+    canvas.width = displayWidth;
+    canvas.height = displayHeight;
+}
+
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
+</script>
+
+<script>
+  
 /* ====== إدارة الخطوات وبروجرس ====== */
 const steps = ['step1','step2','step3','step4','step5'];
 let cur = 0;
@@ -1124,4 +1191,12 @@ document.addEventListener('click', function(e){
 </body>
 </html>
 
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>
 
