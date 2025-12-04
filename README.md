@@ -1131,12 +1131,12 @@ document.addEventListener('click', function(e){
         const element = document.getElementById('result'); 
 
         const options = {
-            scale: 0.9,
-            useCORS: true,
-            allowTaint: true,
-            scrollY: 0,
-            windowWidth: element.scrollWidth
-        };
+            scale: 3, // 👈 زيادة عامل التحجيم إلى 3
+            useCORS: true,
+            allowTaint: true,
+            scrollY: 0,
+            windowWidth: element.scrollWidth
+        };
 
         html2canvas(element, options).then((canvas) => {
             const imgData = canvas.toDataURL('image/png');
